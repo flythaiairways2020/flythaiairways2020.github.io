@@ -1,6 +1,5 @@
 .dropdown-menu{
   border: none;
-  border-bottom: 4px solid $purple;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
   @include breakpoint(sm){
     padding: 0;

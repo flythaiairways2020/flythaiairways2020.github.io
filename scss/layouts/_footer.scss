@@ -1,61 +1,128 @@
-.footer{
-  &__top{
-    background-color: rgba(102, 47, 142, 0.6);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-blend-mode: multiply;
-    @include breakpoint(xs){
+.footer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  //background-blend-mode: darken;
+  //background-color: rgba(2, 27, 103, .8);
+  position: relative;
+  &:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 27, 103, .8);
+  }
+  &__mail {
+    border-bottom: 1px solid #99A9E1;
+    padding: 30px 0;
+    position: relative;
+    @include breakpoint(sm) {
+      padding: 3vw 0;
+    }
+
+    .container {
+      @include breakpoint(sm) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 15px;
+      @include breakpoint(sm) {
+        font-size: 1.5vw;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__top {
+    border-bottom: 1px solid #99A9E1;
+    position: relative;
+    @include breakpoint(xs) {
       padding: 30px 0;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 3vw 0;
     }
   }
-  &__title{
-    font-size: 20px;
-    color: $orange;
-    font-weight: 500;
-    text-transform: uppercase;
+
+  &__name {
     margin-bottom: 15px;
-    @include breakpoint(sm){
-      margin-bottom: 2vw;
-      font-size: 1.5vw;
+    @include breakpoint(sm) {
+      margin-bottom: 1vw;
+    }
+
+    p {
+      color: #fff;
+
+      &.p1 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        line-height: 1;
+        @include breakpoint(sm) {
+          font-size: 1.5vw;
+          margin-bottom: 1vw;
+        }
+      }
+
+      &.p2 {
+        margin-bottom: 0;
+        font-size: 14px;
+        @include breakpoint(sm){
+          font-size: 1vw;
+        }
+      }
     }
   }
-  &__list{
-    @include breakpoint(sm){
+
+  &__list {
+    @include breakpoint(sm) {
       display: flex;
       margin: 0 -1vw;
     }
-    ul{
-      @include breakpoint(xs){
+
+    ul {
+      @include breakpoint(xs) {
         margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0;
+        }
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         width: 25%;
         padding: 0 1vw;
       }
-      li{
-        @include breakpoint(only-ipad){
+
+      li {
+        @include breakpoint(only-ipad) {
           line-height: 1.1;
         }
-        &.liTitle{
+
+        &.liTitle {
           font-size: 16px;
           margin-bottom: 5px;
           color: #fff;
           font-weight: 500;
-          @include breakpoint(sm){
+          @include breakpoint(sm) {
             font-size: 1.1vw;
             margin-bottom: 1vw;
           }
         }
-        a{
+
+        a {
           font-size: 14px;
           color: #fff;
-          @include breakpoint(sm){
+          @include breakpoint(sm) {
             font-size: 1vw;
-            &:hover{
+            &:hover {
               text-decoration: underline;
             }
           }
@@ -63,75 +130,92 @@
       }
     }
   }
-  &__input{
+
+  &__input {
     display: flex;
-    margin-bottom: 15px;
-    @include breakpoint(sm){
-      margin-bottom: 2vw;
+    @include breakpoint(sm) {
+      width: 40%;
     }
-    .btn{
-      @include breakpoint(xs){
+
+    .btn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      @include breakpoint(xs) {
         width: 130px;
-        margin-left: 15px;
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         width: 10vw;
-        margin-left: 1vw;
       }
+    }
+
+    .form-control {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: none;
     }
   }
-  &__group{
-    @include breakpoint(sm){
+
+  &__group {
+    @include breakpoint(xs){
+      margin-bottom: 20px;
+    }
+    @include breakpoint(sm) {
       display: flex;
       margin: 0 -1vw;
     }
   }
-  &__icon{
-    @include breakpoint(xs){
+
+  &__icon {
+    @include breakpoint(xs) {
       margin-bottom: 15px;
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 0 1vw;
     }
-    p{
+
+    p {
       font-size: 16px;
       color: #fff;
       font-weight: 500;
       margin-bottom: 5px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         font-size: 1.1vw;
         margin-bottom: 1vw;
       }
     }
-    ul{
+
+    ul {
       display: flex;
-      li{
-        + li{
+
+      li {
+        + li {
           margin-left: 15px;
-          @include breakpoint(sm){
+          @include breakpoint(sm) {
             margin-left: 1vw;
           }
         }
       }
     }
   }
-  &__bottom{
-    background-color: $purple;
+
+  &__bottom {
     text-align: center;
     padding: 10px 15px;
     font-size: 12px;
     color: #fff;
-    @include breakpoint(sm){
+    position: relative;
+    @include breakpoint(sm) {
       padding: .7vw 1vw;
       font-size: .9vw;
     }
   }
+
   .col-8,
-  .col-4{
-    @include breakpoint(xs){
+  .col-4 {
+    @include breakpoint(xs) {
       flex: 0 0 100%;
       max-width: 100%;
     }

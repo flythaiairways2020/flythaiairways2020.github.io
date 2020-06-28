@@ -921,12 +921,12 @@ html(lang="vi")
             });
             if (screen.width < 768) {
                 $('.camNavbar__link').click(function () {
-                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).next('.subMenu__child').slideToggle(200);
                     $(this).parent('li').toggleClass('active');
                 });
             };
             if (screen.width < 768) {
-                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
             };
 
         script.

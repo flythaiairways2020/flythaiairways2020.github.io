@@ -1,202 +1,99 @@
-if page === "index1"
-    header.header.header_home
-        .container
-            .camNavbar
-                button.camNavbar__toggle(type='button')
-                    svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
-                        path(d='M4 8H28V10.6667H4V8ZM4 14.6667H28V17.3333H4V14.6667ZM4 21.3333H28V24H4V21.3333Z', fill='white')
-                .camNavbar__logo
-                    .logo
-                        a(href='index.html')
-                            img.imgDesktop(src='images/logo.png')
-                            img.imgMobile(src='images/logo-white.png')
-                .camNavbar__main
-                    .camNavbar__body
-                        .camNavbar__header
-                            .logo
-                                a(href='index.html')
-                                    img.imgMobile(src='images/logo-white.png')
-                            button.camNavbar__close(type='button')
-                                svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                    path(d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z', fill='white')
-                        .camNavbar__cont
-                            ul.camNavbar__nav
-                                li.active
-                                    a.camNavbar__link(href='index.html')
-                                        span Home
-                                li
-                                    a.camNavbar__link(href='#')
-                                        span Manage booking
+header.header
+    .container
+        .camNavbar
+            .camNavbar__logo
+                .logo
+                    a(href='index.html')
+                        img(src='images/logo.png')
+            button.camNavbar__toggle(type='button')
+                svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M4 8H28V10.6667H4V8ZM4 14.6667H28V17.3333H4V14.6667ZM4 21.3333H28V24H4V21.3333Z', fill='white')
+            .camNavbar__main
+                .camNavbar__body
+                    .camNavbar__header
+                        .logo
+                            a(href='index.html')
+                                img(src='images/logo.png')
+                        button.camNavbar__close(type='button')
+                            svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z', fill='white')
+                    .camNavbar__cont
+                        ul.camNavbar__nav
+                            li.active
+                                a.camNavbar__link(href='index.html')
+                                    span Home
+                            li.subMenu
+                                a.camNavbar__link(href='#')
+                                    span Manage booking
+                                ul.subMenu__child
+                                    li
+                                        a(href='#')
+                                            span Info 1
+                                    li
+                                        a(href='#')
+                                            span Info 2
+                            li.subMenu
+                                a.camNavbar__link(href='#')
+                                    span Travel Infomation
+                                ul.subMenu__child
+                                    li
+                                        a(href='#')
+                                            span Info 1
+                                    li
+                                        a(href='#')
+                                            span Info 2
+                            li.subMenu
+                                a.camNavbar__link(href='#')
+                                    span Favourite Destinations
+                                ul.subMenu__child
+                                    li
+                                        a(href='#')
+                                            span Info 1
+                                    li
+                                        a(href='#')
+                                            span Info 2
+                        .camNavbar__other
+                            .searchDropdown
+                                button.dropdown-toggle(type='button', data-toggle='dropdown')
+                                    svg.svg1(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M19.4073 17.7527L14.9969 13.3422C16.0587 11.9286 16.6319 10.208 16.63 8.44C16.63 3.92406 12.9559 0.25 8.44 0.25C3.92406 0.25 0.25 3.92406 0.25 8.44C0.25 12.9559 3.92406 16.63 8.44 16.63C10.208 16.6319 11.9286 16.0587 13.3422 14.9969L17.7527 19.4073C17.9759 19.6069 18.2671 19.7135 18.5664 19.7051C18.8658 19.6967 19.1506 19.574 19.3623 19.3623C19.574 19.1506 19.6967 18.8658 19.7051 18.5664C19.7135 18.2671 19.6069 17.9759 19.4073 17.7527ZM2.59 8.44C2.59 7.28298 2.9331 6.15194 3.5759 5.18991C4.21871 4.22789 5.13235 3.47808 6.2013 3.03531C7.27025 2.59253 8.44649 2.47668 9.58128 2.70241C10.7161 2.92813 11.7584 3.48529 12.5766 4.30343C13.3947 5.12156 13.9519 6.16393 14.1776 7.29872C14.4033 8.43351 14.2875 9.60975 13.8447 10.6787C13.4019 11.7476 12.6521 12.6613 11.6901 13.3041C10.7281 13.9469 9.59702 14.29 8.44 14.29C6.88906 14.2881 5.40217 13.6712 4.30548 12.5745C3.2088 11.4778 2.59186 9.99095 2.59 8.44Z', fill='white')
+                                    span Search
+                                .dropdown-menu
+                                    .searchDropdown__box
+                                        input.form-control(type='text' placeholder='Search')
+                                        button.btn.btn-orange(type='button')
+                                            svg.svg1(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M19.4073 17.7527L14.9969 13.3422C16.0587 11.9286 16.6319 10.208 16.63 8.44C16.63 3.92406 12.9559 0.25 8.44 0.25C3.92406 0.25 0.25 3.92406 0.25 8.44C0.25 12.9559 3.92406 16.63 8.44 16.63C10.208 16.6319 11.9286 16.0587 13.3422 14.9969L17.7527 19.4073C17.9759 19.6069 18.2671 19.7135 18.5664 19.7051C18.8658 19.6967 19.1506 19.574 19.3623 19.3623C19.574 19.1506 19.6967 18.8658 19.7051 18.5664C19.7135 18.2671 19.6069 17.9759 19.4073 17.7527ZM2.59 8.44C2.59 7.28298 2.9331 6.15194 3.5759 5.18991C4.21871 4.22789 5.13235 3.47808 6.2013 3.03531C7.27025 2.59253 8.44649 2.47668 9.58128 2.70241C10.7161 2.92813 11.7584 3.48529 12.5766 4.30343C13.3947 5.12156 13.9519 6.16393 14.1776 7.29872C14.4033 8.43351 14.2875 9.60975 13.8447 10.6787C13.4019 11.7476 12.6521 12.6613 11.6901 13.3041C10.7281 13.9469 9.59702 14.29 8.44 14.29C6.88906 14.2881 5.40217 13.6712 4.30548 12.5745C3.2088 11.4778 2.59186 9.99095 2.59 8.44Z', fill='white')
+                            .langBox
+                                p Language
+                                .dropdown
+                                    button.dropdown-toggle(type='button', data-toggle='dropdown')
+                                        img(src='images/lang-uk.png')
                                         svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                    ul.camNavbar__sub
-                                        li
-                                            a(href='#')
-                                                span Info 1
-                                        li
-                                            a(href='#')
-                                                span Info 2
-                                li
-                                    a.camNavbar__link(href='#')
-                                        span Travel Infomation
-                                        svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                    ul.camNavbar__sub
-                                        li
-                                            a(href='#')
-                                                span Info 1
-                                        li
-                                            a(href='#')
-                                                span Info 2
-                                li
-                                    a.camNavbar__link(href='#')
-                                        span Favourite Destinations
-                                        svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                    ul.camNavbar__sub
-                                        li
-                                            a(href='#')
-                                                span Info 1
-                                        li
-                                            a(href='#')
-                                                span Info 2
-                            .camNavbar__other
-                                .inputSearch
-                                    input.form-control(type='text' placeholder='Search')
-                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                        path(fill='rgba(0, 0, 0, 0.35)' d='M5.91667 0.5C7.35326 0.5 8.73101 1.07068 9.74683 2.0865C10.7627 3.10233 11.3333 4.48008 11.3333 5.91667C11.3333 7.25833 10.8417 8.49167 10.0333 9.44167L10.2583 9.66667H10.9167L15.0833 13.8333L13.8333 15.0833L9.66667 10.9167V10.2583L9.44167 10.0333C8.49167 10.8417 7.25833 11.3333 5.91667 11.3333C4.48008 11.3333 3.10233 10.7627 2.0865 9.74683C1.07068 8.73101 0.5 7.35326 0.5 5.91667C0.5 4.48008 1.07068 3.10233 2.0865 2.0865C3.10233 1.07068 4.48008 0.5 5.91667 0.5ZM5.91667 2.16667C3.83333 2.16667 2.16667 3.83333 2.16667 5.91667C2.16667 8 3.83333 9.66667 5.91667 9.66667C8 9.66667 9.66667 8 9.66667 5.91667C9.66667 3.83333 8 2.16667 5.91667 2.16667Z')
-
-                                .langBox
-                                    p Language
-                                    .dropdown
-                                        button.dropdown-toggle(type='button', data-toggle='dropdown')
+                                            path(d='M0 0L5 5L10 0H0Z', fill='#fff')
+                                    .dropdown-menu
+                                        a.dropdown-item.active(href='#')
                                             img(src='images/lang-uk.png')
-                                            svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                        .dropdown-menu
-                                            a.dropdown-item.active(href='#')
-                                                img(src='images/lang-uk.png')
-                                                span English
+                                            span English
 
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-deutsch.png')
-                                                span Deutsch
+                                        a.dropdown-item(href='#')
+                                            img(src='images/lang-deutsch.png')
+                                            span Deutsch
 
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-france.png')
-                                                span France
+                                        a.dropdown-item(href='#')
+                                            img(src='images/lang-france.png')
+                                            span France
 
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-vietnam.png')
-                                                span Tiếng Việt
+                                        a.dropdown-item(href='#')
+                                            img(src='images/lang-vietnam.png')
+                                            span Tiếng Việt
 
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-china.png')
-                                                span China
+                                        a.dropdown-item(href='#')
+                                            img(src='images/lang-china.png')
+                                            span China
 
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-korea.png')
-                                                span Korea
+                                        a.dropdown-item(href='#')
+                                            img(src='images/lang-korea.png')
+                                            span Korea
 
-                    .camNavbar__backdrop
-else
-    header.header
-        .container
-            .camNavbar
-                button.camNavbar__toggle(type='button')
-                    svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
-                        path(d='M4 8H28V10.6667H4V8ZM4 14.6667H28V17.3333H4V14.6667ZM4 21.3333H28V24H4V21.3333Z', fill='white')
-                .camNavbar__logo
-                    .logo
-                        a(href='index.html')
-                            img.imgDesktop(src='images/logo.png')
-                            img.imgMobile(src='images/logo-white.png')
-                .camNavbar__main
-                    .camNavbar__body
-                        .camNavbar__header
-                            .logo
-                                a(href='index.html')
-                                    img.imgMobile(src='images/logo-white.png')
-                            button.camNavbar__close(type='button')
-                                svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                    path(d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z', fill='white')
-                        .camNavbar__cont
-                            ul.camNavbar__nav
-                                li.active
-                                    a.camNavbar__link(href='index.html')
-                                        span Home
-                                li
-                                    a.camNavbar__link(href='#')
-                                        span Manage booking
-                                        svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                    ul.camNavbar__sub
-                                        li
-                                            a(href='#')
-                                                span Info 1
-                                        li
-                                            a(href='#')
-                                                span Info 2
-                                li
-                                    a.camNavbar__link(href='#')
-                                        span Travel Infomation
-                                        svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                    ul.camNavbar__sub
-                                        li
-                                            a(href='#')
-                                                span Info 1
-                                        li
-                                            a(href='#')
-                                                span Info 2
-                                li
-                                    a.camNavbar__link(href='#')
-                                        span Favourite Destinations
-                                        svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                    ul.camNavbar__sub
-                                        li
-                                            a(href='#')
-                                                span Info 1
-                                        li
-                                            a(href='#')
-                                                span Info 2
-                            .camNavbar__other
-                                .inputSearch
-                                    input.form-control(type='text' placeholder='Search')
-                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                        path(fill='rgba(0, 0, 0, 0.35)' d='M5.91667 0.5C7.35326 0.5 8.73101 1.07068 9.74683 2.0865C10.7627 3.10233 11.3333 4.48008 11.3333 5.91667C11.3333 7.25833 10.8417 8.49167 10.0333 9.44167L10.2583 9.66667H10.9167L15.0833 13.8333L13.8333 15.0833L9.66667 10.9167V10.2583L9.44167 10.0333C8.49167 10.8417 7.25833 11.3333 5.91667 11.3333C4.48008 11.3333 3.10233 10.7627 2.0865 9.74683C1.07068 8.73101 0.5 7.35326 0.5 5.91667C0.5 4.48008 1.07068 3.10233 2.0865 2.0865C3.10233 1.07068 4.48008 0.5 5.91667 0.5ZM5.91667 2.16667C3.83333 2.16667 2.16667 3.83333 2.16667 5.91667C2.16667 8 3.83333 9.66667 5.91667 9.66667C8 9.66667 9.66667 8 9.66667 5.91667C9.66667 3.83333 8 2.16667 5.91667 2.16667Z')
-
-                                .langBox
-                                    p Language
-                                    .dropdown
-                                        button.dropdown-toggle(type='button', data-toggle='dropdown')
-                                            img(src='images/lang-uk.png')
-                                            svg.svg1(width='10', height='5', viewBox='0 0 10 5', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M0 0L5 5L10 0H0Z', fill='rgba(0, 0, 0, 0.35)')
-                                        .dropdown-menu
-                                            a.dropdown-item.active(href='#')
-                                                img(src='images/lang-uk.png')
-                                                span English
-
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-deutsch.png')
-                                                span Deutsch
-
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-france.png')
-                                                span France
-
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-vietnam.png')
-                                                span Tiếng Việt
-
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-china.png')
-                                                span China
-
-                                            a.dropdown-item(href='#')
-                                                img(src='images/lang-korea.png')
-                                                span Korea
-
-                    .camNavbar__backdrop
+                .camNavbar__backdrop
