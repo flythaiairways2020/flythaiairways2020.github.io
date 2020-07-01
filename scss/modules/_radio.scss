@@ -14,7 +14,7 @@
       padding-left: 2vw;
       transition: all .2s;
       &:hover{
-        color: $orange;
+        color: $color-3;
       }
     }
   }
@@ -27,7 +27,7 @@
     top:3px;
     display: inline-block;
     text-align: center;
-    border: 1px solid #D3D6E9;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 50%;
     background-color:#fff;
     @include breakpoint(sm){
@@ -37,8 +37,8 @@
     }
   }
   input[type="radio"]:checked + label:before {
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 1px $orange;
-    background-color: $orange;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px $color-3;
+    background-color: $color-3;
   }
 }

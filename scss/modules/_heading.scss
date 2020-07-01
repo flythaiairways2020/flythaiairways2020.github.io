@@ -1,0 +1,56 @@
+h1{
+  font-size: 26px;
+  @include breakpoint(sm){
+    font-size: 3vw;
+  }
+}
+h2{
+  font-size: 22px;
+  @include breakpoint(sm){
+    font-size: 2vw;
+  }
+}
+h3{
+  font-size: 18px;
+  @include breakpoint(sm){
+    font-size: 1.6vw;
+  }
+}
+h4{
+  font-size: 16px;
+  @include breakpoint(sm){
+    font-size: 1.2vw;
+  }
+}
+h5{
+  font-size: 13px;
+  @include breakpoint(sm){
+    font-size: .8vw;
+  }
+}
+
+.title2{
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  color: $color-1;
+  @include breakpoint(sm){
+    margin-bottom: 2vw;
+    padding-bottom: 1vw;
+  }
+  &:before{
+    content: '';
+    width: 56px;
+    height: 4px;
+    background-color: $orange-1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint(sm){
+      width: 4vw;
+      height: .3vw;
+    }
+  }
+}

@@ -139,9 +139,9 @@ $slick-opacity-not-active: 0.25 !default;
     width: 2.3vw;
     height: 2.3vw;
     &:hover{
-      border-color: #F79320;
+      border-color: #0E61D7;
       &:before{
-        color: #F79320;
+        color: #0E61D7;
       }
     }
   }
@@ -227,7 +227,7 @@ $slick-opacity-not-active: 0.25 !default;
       font-size: 0;
       width: 10px;
       height: 10px;
-      background: #FBCA7E;
+      background: rgba(14, 97, 215, 0.16);
       cursor: pointer;
       border-radius: 50%;
       @media (min-width: 768px){
@@ -236,7 +236,7 @@ $slick-opacity-not-active: 0.25 !default;
       }
     }
     &.slick-active button {
-      background: #F79320;
+      background: #0E61D7;
     }
   }
 }

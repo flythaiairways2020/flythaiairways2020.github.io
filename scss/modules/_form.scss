@@ -67,20 +67,11 @@
 }
 .inputSvg{
   position: relative;
-  > svg{
+  width: 100%;
+  .svgArrow{
     position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    @include breakpoint(sm){
-      left: 1vw;
-    }
-  }
-  .form-control{
-    padding-left: 45px;
-    @include breakpoint(sm){
-      padding-left: 3vw;
-    }
+    top: 0;
+    right: 0;
   }
 }
 .inputSelect{
