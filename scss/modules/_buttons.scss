@@ -170,6 +170,26 @@
     align-items: center;
   }
 }
+.btnLink{
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: $color-5;
+  @include breakpoint(sm){
+    font-size: 1vw;
+    &:hover{
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+  svg{
+    margin-right: 5px;
+    @include breakpoint(sm){
+      margin-right: .5vw;
+    }
+  }
+}
 a.aLink{
   color: #318FDB;
   @include breakpoint(sm){

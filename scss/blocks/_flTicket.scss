@@ -1,0 +1,693 @@
+.priceBox {
+  text-align: center;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  &:last-child{
+    border-right: none;
+  }
+  &.checked {
+    &:nth-child(1) {
+      background-color: #0E61D7;
+    }
+
+    &:nth-child(2) {
+      background-color: #0A4BB8;
+    }
+
+    &:nth-child(3) {
+      background-color: #07379A;
+    }
+
+    &:nth-child(4) {
+      background-color: #04267C;
+    }
+
+    &:nth-child(5) {
+      background-color: #021B67;
+    }
+
+    p {
+      color: #fff !important;
+    }
+
+    .priceBox__check {
+      border-color: transparent;
+
+      svg {
+        visibility: visible;
+      }
+    }
+
+    .priceBox__label {
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &__check {
+    width: 1.5vw;
+    height: 1.5vw;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+    margin: 0 auto .5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      visibility: hidden;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: .5vw;
+    right: .5vw;
+  }
+
+  p {
+    &.p1 {
+      font-size: 1vw;
+      color: $color-2;
+
+      strong {
+        padding-left: .2vw;
+      }
+    }
+
+    &.p2 {
+      color: rgba(0, 0, 0, 0.65);
+      font-size: .9vw;
+    }
+
+    &.p3 {
+      font-size: 1.1vw;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.55);
+    }
+  }
+}
+
+.airlineInfo {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  @include breakpoint(sm) {
+    font-size: .9vw;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 26px;
+      @include breakpoint(sm) {
+        width: 2vw;
+      }
+    }
+
+    span {
+      flex: 1;
+      padding-left: 8px;
+      @include breakpoint(sm) {
+        padding-left: .7vw;
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '•';
+      padding: 0 1vw;
+      color: rgba(0, 0, 0, 0.15);
+      line-height: 1;
+      font-size: 1.5vw;
+    }
+  }
+
+}
+
+.flInfo {
+  @include breakpoint(xs){
+    padding: 10px;
+  }
+  @include breakpoint(sm) {
+    padding: 1.5vw;
+  }
+
+  &__trip {
+    display: flex;
+    margin: 0 -10px;
+    @include breakpoint(sm) {
+      margin: 0 -.8vw;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    padding: 0 10px;
+    @include breakpoint(sm) {
+      padding: 0 .8vw;
+    }
+  }
+
+  &__flex {
+    margin-top: 5px;
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: .5vw;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+      flex: 1;
+      @include breakpoint(sm){
+        margin: 0 -.9vw;
+      }
+      li{
+        padding: 0 10px;
+        @include breakpoint(sm){
+          padding: 0 .9vw;
+        }
+        + li {
+          border-left: 1px solid rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+    .viewMore{
+      @include breakpoint(xs){
+        font-size: 12px;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+.stopBox {
+  @include breakpoint(sm) {
+    padding-top: .2vw;
+  }
+
+  &__icon {
+    position: relative;
+    text-align: center;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 37%;
+      border-bottom: 1px dashed rgba(0, 0, 0, .15);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    @include breakpoint(sm) {
+      margin-top: .5vw;
+      font-size: .9vw;
+    }
+  }
+}
+
+.flTicket {
+  &__header {
+    display: flex;
+    margin-bottom: .2vw;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  &__left {
+    width: 40%;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  &__right {
+    width: 60%;
+    display: flex;
+  }
+
+  &__th {
+    text-align: center;
+    color: #fff;
+    height: 5.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1vw;
+    padding: 0 1vw;
+  }
+  &__col{
+    flex: 1;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    &:last-child{
+      border-right: none;
+    }
+  }
+
+  &__body {
+  }
+
+  &__row {
+    display: flex;
+    background-color: #fff;
+    box-shadow: $shadow;
+    margin-bottom: .2vw;
+  }
+
+  &__item{
+    position: relative;
+  }
+}
+
+.flDetail {
+  background-color: #fff;
+  transition: all .3s ease-in-out;
+  @include breakpoint(xs){
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    transform: translateY(100%);
+    visibility: hidden;
+  }
+  @include breakpoint(sm){
+    box-shadow: $shadow;
+    position: absolute;
+    top: 100%;
+    transform: scale(.9);
+    z-index: 60;
+    visibility: hidden;
+    opacity: 0;
+  }
+  &.open{
+    @include breakpoint(xs){
+      visibility: visible;
+      transform: none;
+    }
+    @include breakpoint(sm){
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  &__body {
+    @include breakpoint(xs){
+      height: 100%;
+    }
+  }
+
+  &__close {
+    text-align: right;
+    @include breakpoint(xs){
+      padding: 0 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      height: 55px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    @include breakpoint(sm){
+      padding: 1vw;
+    }
+    button {
+      @include breakpoint(xs){
+        padding: 5px;
+      }
+      @include breakpoint(sm){
+        padding: .5vw;
+      }
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  &__main {
+    @include breakpoint(xs){
+      height: calc(100% - 55px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    @include breakpoint(sm){
+      padding-left: 2vw;
+    }
+  }
+
+  &__title{
+    background-color: $color-1;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include breakpoint(xs){
+      font-size: 16px;
+      padding: 5px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      svg{
+        transition: all .2s;
+      }
+      &.rotate{
+        svg{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    @include breakpoint(sm){
+      font-size: 1.1vw;
+      padding: .5vw 1vw;
+      text-align: center;
+    }
+  }
+
+  &__row {
+    @include breakpoint(sm){
+      display: flex;
+    }
+  }
+
+  &__left {
+    @include breakpoint(sm){
+      width: 40%;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-top: none;
+      position: relative;
+      border-top-left-radius: 4px;
+      overflow: hidden;
+    }
+  }
+
+  &__right {
+    @include breakpoint(sm){
+      width: 60%;
+      position: relative;
+      z-index: 11;
+      background-color: #fff;
+      border-top-right-radius: 4px;
+      overflow: hidden;
+    }
+  }
+
+  &__group{
+    @include breakpoint(sm){
+      display: flex;
+    }
+  }
+
+  &__col {
+    @include breakpoint(sm){
+      flex: 1;
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+
+  &__th{
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint(xs){
+      height: 48px;
+      font-size: 14px;
+      padding: 0 15px;
+    }
+    @include breakpoint(sm){
+      height: 4vw;
+      font-size: 1vw;
+      padding: 0 1vw;
+    }
+  }
+
+  &__td{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    @include breakpoint(xs){
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      span{
+        flex: 1;
+        padding: 15px;
+        border-right: 1px solid rgba(0, 0, 0, 0.15);
+        &:first-child{}
+        &:last-child{
+          border-right: none;
+        }
+      }
+    }
+    @include breakpoint(sm){
+      padding: 0 1vw;
+      font-size: 1vw;
+      height: 4vw;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item{
+    position: relative;
+    @include breakpoint(xs){
+      padding: 15px;
+    }
+    @include breakpoint(sm){
+      padding: 1vw;
+    }
+    .flInfo__trip{
+      margin-bottom: 5px;
+      @include breakpoint(sm){
+        margin-bottom: .5vw;
+      }
+    }
+  }
+
+  &__alert{
+    @include breakpoint(xs){
+      padding: 30px 15px;
+    }
+    @include breakpoint(sm){
+      padding: 2vw 0;
+    }
+  }
+
+  &__mobile{
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+}
+
+.timeStop{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  &__cont{
+    display: inline-flex;
+    align-items: center;
+    color: $black55;
+    background-color: #fff;
+    @include breakpoint(xs){
+      font-size: 12px;
+      transform: translateY(15px);
+      padding-right: 15px;
+    }
+    @include breakpoint(sm){
+      font-size: .9vw;
+      transform: translateY(1vw);
+      padding-right: 1vw;
+    }
+    span{
+      flex: 1;
+      @include breakpoint(xs){
+        padding-left: 5px;
+      }
+      @include breakpoint(sm){
+        padding-left: .5vw;
+      }
+      strong{
+        color: $black85;
+      }
+    }
+  }
+
+}
+
+.fareBox{
+  width: 29vw;
+  color: $color-1;
+  text-align: right;
+  position: absolute;
+  top: 2.5vw;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: inset 0 0 16px rgba(0,0,0,.25);
+  transition: all .3s ease-in-out;
+  transform: translateX(100%);
+  &.open{
+    transform: none;
+    overflow: hidden;
+  }
+  &__title{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 1vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__item{
+    font-size: 1vw;
+    font-weight: 500;
+    padding: 0 1vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.btnArrow{
+  position: absolute;
+  top: 0;
+  left: -1.5vw;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  transition: all .3s ease-in-out;
+}
+
+.flTicketMobile{
+  &__header{
+    background-color: $color-1;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px 4px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  &__body{}
+  &__item{
+    background-color: #fff;
+    box-shadow: $shadow;
+    margin-bottom: 4px;
+  }
+  &__total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(14, 97, 215, 0.08);
+    padding: 10px;
+  }
+  &__arrow{
+    padding: 8px 0;
+    &.rotate{
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+    svg{
+      display: block;
+      transition: all .2s;
+    }
+  }
+  &__price{
+    background-color: #fff;
+    display: none;
+  }
+}
+
+.priceMobile{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+  position: relative;
+  &:last-child{
+    border-bottom: none;
+  }
+  &__cont{
+    width: calc(100% - 136px);
+    padding-right: 15px;
+  }
+  &__label{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+  }
+  &__btn{
+    width: 136px;
+    .btn{
+      width: 100%;
+      color: #fff;
+      position: relative;
+      &.selected{
+        background-color: $green;
+      }
+      &.soldOut{
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.25);
+        svg{
+          display: none;
+        }
+      }
+      svg{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

@@ -1,3 +1,6 @@
+.mb0{
+  margin-bottom: 0;
+}
 .mb5{
   margin-bottom: 5px;
   @include breakpoint(sm){
@@ -144,6 +147,15 @@
 .colorWhite{
   color: #fff;
 }
+.color1{
+  color: $color-1;
+}
+.color2{
+  color: $color-2;
+}
+.color3{
+  color: $color-3;
+}
 .text12{
   font-size: 12px;
   @include breakpoint(sm){
@@ -172,6 +184,12 @@
   font-size: 20px;
   @include breakpoint(sm){
     font-size: 1.3vw;
+  }
+}
+.text24{
+  font-size: 24px;
+  @include breakpoint(sm){
+    font-size: 1.5vw;
   }
 }
 
@@ -236,4 +254,22 @@
 }
 .italic{
   font-style: italic;
+}
+.bgBlue1{
+  background-color: #021B67;
+}
+.bgBlue2{
+  background-color: #0E61D7;
+}
+.bgBlue3{
+  background-color: #0A4BB8;
+}
+.bgBlue4{
+  background-color: #07379A;
+}
+.bgBlue5{
+  background-color: #04267C;
+}
+.bgBlue6{
+  background-color: #021B67;
 }

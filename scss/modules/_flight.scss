@@ -136,10 +136,11 @@
   @include breakpoint(xs){
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     background-color: #fff;
-    padding: 8px 0;
+    padding: 16px 0;
   }
   @include breakpoint(sm){
-    background-color: $purple;
+    background-color: #fff;
+    box-shadow: $shadow;
     padding: 1vw 0;
   }
   .container{
@@ -151,74 +152,21 @@
 .flightStep{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 35vw;
   @include breakpoint(xs){
     display: none;
   }
   &__item{
-    width: 30%;
-    position: relative;
-    &:before{
-      content: '';
-      width: 100%;
-      height: .3vw;
-      background-color: #C087DB;
-      position: absolute;
-      top: .6vw;
-      left: .1vw;
-    }
-    &.step1{
-      width: 20%;
-      &.visited{
-        &:before{
-          width: 12vw;
-        }
-      }
-    }
-    &.step2,
-    &.step3,{
-      text-align: center;
-      &.visited{
-        &:before{
-          width: 16vw;
-        }
-      }
-      .flightStep__numb{
-        margin: auto;
-      }
-    }
-    &.step4{
-      width: 20%;
-      display: flex;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      &:before{
-        left: -.1vw;
-      }
-      .flightStep__text{
-        text-align: right;
-      }
-    }
+    display: flex;
+    align-items: center;
     &.active{
       .flightStep__numb{
-        background-color: $orange;
+        background-color: $color-2;
         color: #fff;
       }
       .flightStep__text{
-        color: $orange;
-      }
-    }
-    &.visited{
-      &:before{
-        background-color: $orange;
-        z-index: 1;
-      }
-      .flightStep__numb{
-        background-color: $orange;
-        color: #fff;
-      }
-      .flightStep__text{
-        color: $orange;
+        color: $color-2;
       }
     }
   }
@@ -226,27 +174,26 @@
     width: 1.7vw;
     height: 1.7vw;
     border-radius: 50%;
-    background-color: #C087DB;
-    color: $purple;
+    background-color: $color-1;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1vw;
     font-weight: 500;
-    position: relative;
-    z-index: 1;
   }
   &__text{
     font-size: 1vw;
     font-weight: 500;
-    color: #C087DB;
-    width: 100%;
-    margin-top: .5vw;
+    color: $color-1;
+    margin-left: .5vw;
+    flex: 1;
   }
 }
 .flightStepMobile{
-  font-size: 12px;
-  color: #000;
+  font-size: 14px;
+  color: $color-2;
+  font-weight: 500;
   @include breakpoint(sm){
     display: none;
   }
@@ -362,12 +309,6 @@
     width: 32%;
     &:last-child{
       text-align: right;
-    }
-  }
-  .stopBox{
-    width: 36%;
-    @include breakpoint(sm){
-      padding: 0 1vw;
     }
   }
 }

@@ -18,7 +18,11 @@
     max-width: 80%;
   }
 }
-
+body.noScroll{
+  @include breakpoint(xs){
+    overflow: hidden;
+  }
+}
 
 @import "header";
 @import "footer";

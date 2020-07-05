@@ -76,6 +76,9 @@ a{
     outline: none;
   }
 }
+strong{
+  font-weight: 500;
+}
 body {
   font-family: $base-font-family;
   font-size:$base-font-size;
