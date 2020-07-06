@@ -1,6 +1,5 @@
 .placeGroup{
   display: flex;
-  align-items: center;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -55,10 +54,15 @@
       display: block;
     }
   }
+  .inputSvg .svgArrow{
+    top: -3px;
+    @include breakpoint(sm){
+      top: -.3vw;
+    }
+  }
 }
 .passengerBox{
   display: flex;
-  align-items: center;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -160,8 +164,11 @@
     }
     .svgArrow{
       position: absolute;
-      top: 0;
+      top: -3px;
       right: 0;
+      @include breakpoint(sm){
+        top: -.2vw;
+      }
     }
   }
   .dropdown-menu{
@@ -485,30 +492,54 @@
     }
   }
   &__booking{
-    .alert{
-      margin: 15px 0;
+    .formMerge{
+      @include breakpoint(xs){
+        margin-bottom: 15px;
+      }
       @include breakpoint(sm){
-        margin: 1vw 0;
+        width: 37.5%;
+        padding: 0 .7vw;
+      }
+    }
+    > p {
+      @include breakpoint(xs){
+        color: $black65;
+      }
+    }
+  }
+  &__schedules{
+    .searchBox__datepicker{
+      @include breakpoint(sm){
+        width: 25%;
+      }
+      .t-datepicker__col{
+        @include breakpoint(sm){
+          width: 100%;
+        }
+      }
+    }
+    > p{
+      @include breakpoint(xs){
+        color: $color-1;
       }
     }
   }
   &__status{
-    .searchBox__form{
+    .searchBox__datepicker{
       @include breakpoint(sm){
-        justify-content: flex-end;
+        width: 25%;
+      }
+      .t-datepicker__col{
+        @include breakpoint(sm){
+          width: 100%;
+        }
       }
     }
-  }
-  .iconLine{
-    @include breakpoint(xs){
-      margin-bottom: 15px;
-    }
-    @include breakpoint(sm){
-      margin-bottom: 1.8vw;
-      width: 19%;
-      padding: 0 .7vw;
-      &:hover{
-        text-decoration: underline;
+    .formMerge{
+      @include breakpoint(sm){
+        width: 50%;
+        padding: 0 .7vw;
+        margin-bottom: 1.4vw;
       }
     }
   }
