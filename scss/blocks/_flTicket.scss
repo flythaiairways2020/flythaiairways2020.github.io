@@ -248,12 +248,12 @@
   }
 
   &__left {
-    width: 40%;
+    width: 37%;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
   }
 
   &__right {
-    width: 60%;
+    width: 63%;
     display: flex;
   }
 
@@ -266,7 +266,7 @@
     justify-content: center;
     font-weight: 500;
     font-size: 1vw;
-    padding: 0 1vw;
+    padding: 0 .5vw;
   }
   &__col{
     flex: 1;

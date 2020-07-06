@@ -110,6 +110,7 @@
     overflow: hidden;
     display: flex;
     height: 160px;
+    background-color: #fff;
     @include breakpoint(sm) {
       margin-bottom: 2vw;
       height: 11vw;
@@ -152,7 +153,7 @@
 
   &__link {
     font-size: 18px;
-    color: $black85;
+    color: $color-1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -246,7 +247,7 @@
     padding: 30px 0 0;
     display: none;
     @include breakpoint(sm) {
-      padding: 4vw 0 0;
+      padding: 2vw 0 0;
     }
 
     ul {
@@ -257,36 +258,28 @@
 
       li {
         @include breakpoint(sm) {
-          width: 25%;
-          padding: 0 1vw;
+          padding: .5vw;
         }
-
-        a {
-          font-size: 14px;
-          color: #318FDB;
-          display: inline-flex;
-          align-items: center;
-          padding: 5px 0;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-          display: block;
-          @include breakpoint(sm) {
-            font-size: 1vw;
-            padding: .5vw 0;
-            &:hover {
-              color: #318FDB;
-
-              span {
-                text-decoration: underline;
-              }
-            }
+        .btn{
+          border-color: $color-2;
+          color: $color-2;
+          &:hover{
+            background-color: $color-2;
+            color: #fff;
+            opacity: 1;
           }
+        }
+      }
+    }
 
-          span {
-            margin-left: 10px;
-            @include breakpoint(sm) {
-              margin-left: .8vw;
-            }
-          }
+    > h4 {
+      display: flex;
+      align-items: center;
+      span{
+        flex: 1;
+        padding-left: 15px;
+        @include breakpoint(sm){
+          padding-left: 1vw;
         }
       }
     }
@@ -746,8 +739,4 @@
       object-fit: cover;
     }
   }
-}
-
-.home {
-  background-color: #fff;
 }
