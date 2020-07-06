@@ -256,6 +256,10 @@
       }
 
       li {
+        @include breakpoint(xs){
+          display: inline-block;
+          padding: 5px;
+        }
         @include breakpoint(sm) {
           padding: .5vw;
         }
