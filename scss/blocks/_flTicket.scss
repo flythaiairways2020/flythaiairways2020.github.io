@@ -8,8 +8,38 @@
   cursor: pointer;
   flex: 1;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
+  transition: all .3s;
   &:last-child{
     border-right: none;
+  }
+  &:hover{
+    @include breakpoint(sm){
+      &:nth-child(1) {
+        background-color: #0E61D7;
+      }
+
+      &:nth-child(2) {
+        background-color: #0A4BB8;
+      }
+
+      &:nth-child(3) {
+        background-color: #07379A;
+      }
+
+      &:nth-child(4) {
+        background-color: #04267C;
+      }
+
+      &:nth-child(5) {
+        background-color: #021B67;
+      }
+      p{
+        color: #fff!important;
+      }
+      .priceBox__check{
+        border-color: #fff;
+      }
+    }
   }
   &.checked {
     &:nth-child(1) {

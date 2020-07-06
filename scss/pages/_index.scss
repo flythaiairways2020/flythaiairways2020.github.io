@@ -4,7 +4,7 @@
     margin-bottom: 30px;
   }
   @include breakpoint(sm) {
-    padding: 10vw 0;
+    padding: 6vw 0;
     margin-bottom: 4vw;
   }
 
@@ -112,7 +112,6 @@
     height: 160px;
     background-color: #fff;
     @include breakpoint(sm) {
-      margin-bottom: 2vw;
       height: 11vw;
     }
   }
@@ -670,6 +669,12 @@
     }
   }
 
+  &__form{
+    @include breakpoint(sm){
+      width: 40%;
+    }
+  }
+
   &__download {
     display: flex;
     align-items: center;
@@ -686,6 +691,10 @@
       padding: 5px;
     }
     @include breakpoint(sm) {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       margin-right: 1vw;
       padding: .5vw;
     }

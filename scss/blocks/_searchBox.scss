@@ -353,6 +353,13 @@
         }
       }
     }
+    .radio input[type=radio]+label:before{
+      background-color: transparent;
+      border-color: #fff;
+    }
+    .radio input[type=radio]:checked+label:before{
+      background-color: $orange-1!important;
+    }
   }
   &__form{
     @include breakpoint(xs){

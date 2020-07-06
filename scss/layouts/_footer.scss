@@ -2,8 +2,6 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  //background-blend-mode: darken;
-  //background-color: rgba(2, 27, 103, .8);
   position: relative;
   &:before{
     content: '';
@@ -120,8 +118,10 @@
         a {
           font-size: 14px;
           color: #fff;
+          display: block;
           @include breakpoint(sm) {
             font-size: 1vw;
+            padding: .5vw 0;
             &:hover {
               text-decoration: underline;
             }

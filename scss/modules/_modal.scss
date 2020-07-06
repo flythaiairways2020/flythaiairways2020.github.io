@@ -22,6 +22,7 @@ button.close{
   position: absolute;
   top: 15px;
   right: 15px;
+  opacity: 1;
   @include breakpoint(sm){
     padding: .5vw;
     top: 1vw;

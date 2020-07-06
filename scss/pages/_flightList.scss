@@ -68,6 +68,7 @@
     cursor: pointer;
     border-top: 6px solid transparent;
     transition: all .2s;
+    font-weight: 500;
     @include breakpoint(xs){
       width: 50%;
       padding:15px;
@@ -289,23 +290,12 @@
   @include breakpoint(sm){
     margin-bottom: 1vw;
   }
-  .dropdown-toggle{
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 14px;
-    @include breakpoint(sm){
-      font-size: 1vw;
-    }
-    svg{
-      margin: 0;
-    }
+  .btn{
     span{
       margin: 0 5px;
       @include breakpoint(sm){
         margin: 0 1vw;
       }
-    }
-    &:after{
-      display: none;
     }
   }
   .dropdown-menu{
@@ -315,5 +305,14 @@
       transform: none!important;
       top: 100% !important;
     }
+    @include breakpoint(sm){
+      right: 0!important;
+      left: auto!important;
+      transform: none!important;
+      top: 100% !important;
+    }
+  }
+  .dropdown-item{
+    cursor: pointer;
   }
 }
