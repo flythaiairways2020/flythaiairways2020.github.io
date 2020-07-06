@@ -1,0 +1,489 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.flightReview
+                .flightHeader
+                    .container
+                        .flightHeader__left
+                            .flightStep
+                                .flightStep__item
+                                    .flightStep__numb 1
+                                    .flightStep__text Select Flight
+                                .flightStep__item
+                                    .flightStep__numb 2
+                                    .flightStep__text Passenger
+                                .flightStep__item.active
+                                    .flightStep__numb 3
+                                    .flightStep__text Review
+                                .flightStep__item
+                                    .flightStep__numb 4
+                                    .flightStep__text Payment
+                            .flightStepMobile 03. Review
+                .flightReview__main
+                    .container
+                        .orderCode
+                            .orderCode__label.confirm
+                                span Order code:&nbsp;
+                                span.medium G-46f76a
+                            .orderCode__label.pending
+                                span Order code:&nbsp;
+                                span.medium G-46f76a
+                            .orderCode__label.cancel
+                                span Order code:&nbsp;
+                                span.medium G-46f76a
+                            .orderCode__text The order number is for your reference only, NOT for check-in and boarding!
+                        .flightReview__group
+                            .formBox
+                                h2.color1.mb15 Price
+                                .formBox__body
+                                    .formBox__item
+                                        .formBox__price
+                                            .formBox__flex
+                                                .formBox__left
+                                                    .formBox__price__total
+                                                        .d-block
+                                                            p.text16.medium.color1 TOTAL
+                                                            p.text12.colorBlack55 The price is total price for all travelers (including taxes, fees & charges)
+                                                        .d-block
+                                                            p.text24.color2.medium USD 666.88
+                                                    .formBox__price__cost
+                                                        .d-flex.mb5
+                                                            p.text14.colorBlack85 Fares
+                                                            p.text14.colorBlack85 USD 664.66
+
+                                                        .d-flex.mb5
+                                                            p.text14.colorBlack85 Taxes, Fees and Charges
+                                                            p.text14.colorBlack85 USD 2.22
+                                                        .airlineInfo
+                                                            .airlineInfo__logo
+                                                                img(src='images/logo-vnairline.png')
+                                                                span VN 233
+                                                            .airlineInfo__name
+                                                                span Airbus A321
+                                                .formBox__right
+                                                    .formBox__price__detail
+                                                        .d-flex
+                                                            p.text16.medium.color1 PRICE DETAILS
+                                                            p.text16.medium.color2 USD 666.88
+                                                        .d-flex
+                                                            button.btnDetail.text14(type='button')
+                                                                i.fas.fa-caret-down
+                                                                span.ml5 1 Adult
+                                                            p.text14 USD 666.88
+                                                        ul.formBox__sub.costBox
+                                                            li
+                                                                p.text12.medium.colorBlack85 Air Transportation Charges
+                                                            li
+                                                                p.text12.colorBlack85 Base Fare
+                                                                p.text12.colorBlack85 USD 166.00
+
+
+                                                            li
+                                                                p.text12.colorBlack85 Service Charges
+                                                                p.text12.colorBlack85 USD 166.00
+
+
+                                                            li
+                                                                p.text12.colorBlack85.medium Taxes & Fees
+                                                                p.text12.colorBlack85.medium USD 66.88
+
+
+                                                            li
+                                                                p.text12.colorBlack85.medium Total per Adult
+                                                                p.text12.colorBlack85.medium USD 66.88
+
+
+                                                            li
+                                                                p.text12.colorBlack85.medium x 1 Adult
+                                                                p.text12.colorBlack85.medium USD 66.88
+
+
+                            .formBox
+                                h2.color1.mb15 Itinerary
+                                .formBox__body
+                                    .formBox__item
+                                        .formBox__itinerary
+                                            .formBox__itinerary__item
+                                                .formBox__itinerary__header
+                                                    p.text20.medium.color1.mb5 Departing flight
+                                                    .lineInfo
+                                                        .lineInfo__trip
+                                                            p.text16.color1.medium Hanoi (HAN), Vietnam
+                                                            svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+
+                                                            p.text16.color1.medium Phuket (HKT), Thailand
+                                                        .lineInfo__date
+                                                            p.text14.colorBlack65 Wednesday, 15 January 2020
+                                                .formBox__flex
+                                                    .formBox__left
+                                                        .yourSelection__group
+                                                            .d-block
+                                                                p.text18.medium.color1 15:35 HAN
+                                                                p.text12.color1.medium Hanoi, Vietnam
+                                                            .d-block
+                                                                .text-center
+                                                                    .yourSelection__time 2h05m
+                                                                    p.text12.medium.mt5
+                                                                        span.colorGreen None Stop
+                                                            .d-block
+                                                                p.text18.medium.color1 17: 40 BKK
+                                                                p.text12.color1.medium Bangkok, Thailand
+                                                        .airlineInfo
+                                                            .airlineInfo__logo
+                                                                img(src='images/logo-vnairline.png')
+                                                                span VN 233
+                                                            .airlineInfo__name
+                                                                span Airbus A321
+                                                    .formBox__right
+                                                        ul.formBox__sub
+                                                            li
+                                                                p.text14.colorBlack85.medium Duration
+                                                                p.text14.colorBlack85 02h05m
+                                                            li
+                                                                p.text14.colorBlack85.medium Airline
+                                                                p.text14.colorBlack85 Cambodia Air
+                                                            li
+                                                                p.text14.colorBlack85.medium Aircralt
+                                                                p.text14.colorBlack85 K6 - 3835 - 321
+                                                            li
+                                                                p.text14.colorBlack85.medium Cabin
+                                                                p.text14.color2 Economy
+                                                            li
+                                                                p.text14.colorBlack85.medium Class
+                                                                p.text14.colorBlack85 W
+                                                        .d-flex.mt15
+                                                            p.text14.colorBlack85.mr15 Total Duration
+                                                            p.text14.medium
+                                                                span.colorRed 02h05m,
+                                                                span.colorGreen &nbsp;Non-Stop
+                                            .formBox__itinerary__item
+                                                .formBox__itinerary__header
+                                                    p.text20.medium.color1.mb5 Return flight
+                                                    .lineInfo
+                                                        .lineInfo__trip
+                                                            p.text16.color1.medium Hanoi (HAN), Vietnam
+                                                            svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+
+                                                            p.text16.color1.medium Phuket (HKT), Thailand
+                                                        .lineInfo__date
+                                                            p.text14.colorBlack65 Wednesday, 15 January 2020
+                                                .formBox__flex
+                                                    .formBox__left
+                                                        .yourSelection__group
+                                                            .d-block
+                                                                p.text18.medium.color1 15:35 HAN
+                                                                p.text12.color1.medium Hanoi, Vietnam
+                                                            .d-block
+                                                                .text-center
+                                                                    .yourSelection__time 2h05m
+                                                                    p.text12.medium.mt5
+                                                                        span.colorGreen None Stop
+                                                            .d-block
+                                                                p.text18.medium.color1 17: 40 BKK
+                                                                p.text12.color1.medium Bangkok, Thailand
+                                                        .airlineInfo
+                                                            .airlineInfo__logo
+                                                                img(src='images/logo-vnairline.png')
+                                                                span VN 233
+                                                            .airlineInfo__name
+                                                                span Airbus A321
+                                                    .formBox__right
+                                                        ul.formBox__sub
+                                                            li
+                                                                p.text14.colorBlack85.medium Duration
+                                                                p.text14.colorBlack85 02h05m
+                                                            li
+                                                                p.text14.colorBlack85.medium Airline
+                                                                p.text14.colorBlack85 Cambodia Air
+                                                            li
+                                                                p.text14.colorBlack85.medium Aircralt
+                                                                p.text14.colorBlack85 K6 - 3835 - 321
+                                                            li
+                                                                p.text14.colorBlack85.medium Cabin
+                                                                p.text14.color2 Economy
+                                                            li
+                                                                p.text14.colorBlack85.medium Class
+                                                                p.text14.colorBlack85 W
+                                                        .d-flex.mt15
+                                                            p.text14.colorBlack85.mr15 Total Duration
+                                                            p.text14.medium
+                                                                span.colorRed 02h05m,
+                                                                span.colorGreen &nbsp;Non-Stop
+                            .formBox
+                                h2.color1.mb15 Passenger details (2 traveler/s)
+                                .formBox__body
+                                    .formBox__item
+                                        .formBox__traveler
+                                            .formBox__traveler__item
+                                                .formBox__flex
+                                                    .formBox__left
+                                                        .d-flex
+                                                            svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.85')
+                                                            p.ml10.text16.colorBlack85.medium Adult 1
+                                                    .formBox__right
+                                                        ul.formBox__sub
+                                                            li
+                                                                p.text14.colorBlack85.medium Full Name
+                                                                p.text14.colorBlack85 Mr. Pham Duc Quang
+
+
+
+
+                                                            li
+                                                                p.text14.colorBlack85.medium Date of Birth
+                                                                p.text14.colorBlack85 26 Apr 1991
+
+
+
+
+                                                            li
+                                                                p.text14.colorBlack85.medium Passport
+                                                                p.text14.colorBlack85 B1234567
+
+
+
+
+                                                            li
+                                                                p.text14.colorBlack85.medium Nationality
+                                                                p.text14.colorBlack85 Vietnamese
+
+
+
+
+                                                            li
+                                                                p.text14.colorBlack85.medium Date of Issued
+                                                                p.text14.colorBlack85 12 May 2018
+
+
+
+
+                                                            li
+                                                                p.text14.colorBlack85.medium Date of Expired
+                                                                p.text14.colorBlack85 12 May 2028
+
+
+
+
+                                            .formBox__traveler__item
+                                                .formBox__flex
+                                                    .formBox__left
+                                                        .d-flex
+                                                            svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.85')
+                                                            p.ml10.text16.colorBlack85.medium Adult 2
+                                                    .formBox__right
+                                                        ul.formBox__sub
+                                                            li
+                                                                p.text14.colorBlack85.medium Full Name
+                                                                p.text14.colorBlack85 Mr. Pham Duc Quang
+                                                            li
+                                                                p.text14.colorBlack85.medium Date of Birth
+                                                                p.text14.colorBlack85 26 Apr 1991
+                                                            li
+                                                                p.text14.colorBlack85.medium Passport
+                                                                p.text14.colorBlack85 B1234567
+                                                            li
+                                                                p.text14.colorBlack85.medium Nationality
+                                                                p.text14.colorBlack85 Vietnamese
+                                                            li
+                                                                p.text14.colorBlack85.medium Date of Issued
+                                                                p.text14.colorBlack85 12 May 2018
+                                                            li
+                                                                p.text14.colorBlack85.medium Date of Expired
+                                                                p.text14.colorBlack85 12 May 2028
+                            .formBox
+                                h2.color1.mb15 Contact details
+                                .formBox__body
+                                    .formBox__item
+                                        .formBox__contact
+                                            .formBox__flex
+                                                .formBox__left
+                                                    .formBox__contact__line
+                                                        .d-block
+                                                            .d-flex
+                                                                svg.svg1(width='18', height='18', viewBox='0 0 18 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                    path(d='M3.62 7.79C5.06 10.62 7.38 12.94 10.21 14.38L12.41 12.18C12.69 11.9 13.08 11.82 13.43 11.93C14.55 12.3 15.75 12.5 17 12.5C17.2652 12.5 17.5196 12.6054 17.7071 12.7929C17.8946 12.9804 18 13.2348 18 13.5V17C18 17.2652 17.8946 17.5196 17.7071 17.7071C17.5196 17.8946 17.2652 18 17 18C12.4913 18 8.1673 16.2089 4.97918 13.0208C1.79107 9.8327 0 5.50868 0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H4.5C4.76522 0 5.01957 0.105357 5.20711 0.292893C5.39464 0.48043 5.5 0.734784 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z', fill='black', fill-opacity='0.85')
+                                                                p.ml10.text16.colorBlack85.medium Phone
+                                                        .d-block
+                                                            p.text14.colorBlack85 (+ 84) 363 888 888
+                                                .formBox__right
+                                                    .formBox__contact__line
+                                                        .d-block
+                                                            .d-flex
+                                                                svg.svg1(width='20', height='16', viewBox='0 0 20 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                    path(d='M18 4L10 9L2 4V2L10 7L18 2V4ZM18 0H2C0.89 0 0 0.89 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 0.89 19.1 0 18 0Z', fill='black', fill-opacity='0.85')
+
+                                                                p.ml10.text16.colorBlack85.medium Email
+                                                        .d-block
+                                                            p.text14.colorBlack85 phuongbui@gmail.com
+                            .formBox
+                                h2.color1.mb15 Baggage
+                                .formBox__body
+                                    .formBox__item
+                                        .formBox__baggage
+                                            .formBox__baggage__item
+                                                .formBox__flex
+                                                    .formBox__left
+                                                        .d-block
+                                                            p.text16.colorBlack85.medium.mb5 Traveler 1 (Adult)
+                                                            .lineInfo__trip
+                                                                p.text16.color1.medium Hanoi (HAN), Vietnam
+                                                                svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                    path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+                                                                p.text16.color1.medium Phuket (HKT), Thailand
+
+                                                    .formBox__right
+                                                        .d-block
+                                                            p.text14.colorBlack85.medium.mb5
+                                                                span CARRY-ON BAGGAGE:&nbsp;
+                                                                span INCLUDED
+                                                            p.text14.colorBlack85.mb5 Carry10kg 22lbupto 45li 115lcm
+
+                                                        .d-block
+                                                            p.text14.colorBlack85.medium.mb5
+                                                                span CHECKED BAGGAGE:&nbsp;
+                                                                span.colorRed NOT INCLUDED
+                                                            p.text14.colorBlack85.mb5 Carry10kg 22lbupto 45li 115lcm
+                                            .formBox__baggage__item
+                                                .formBox__flex
+                                                    .formBox__left
+                                                        .d-block
+                                                            .lineInfo__trip
+                                                                p.text16.color1.medium Hanoi (HAN), Vietnam
+                                                                svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                    path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+                                                                p.text16.color1.medium Phuket (HKT), Thailand
+
+                                                    .formBox__right
+                                                        .d-block
+                                                            p.text14.colorBlack85.medium.mb5
+                                                                span CARRY-ON BAGGAGE:&nbsp;
+                                                                span INCLUDED
+                                                            p.text14.colorBlack85.mb5 Carry10kg 22lbupto 45li 115lcm
+
+                                                        .d-block
+                                                            p.text14.colorBlack85.medium.mb5
+                                                                span CHECKED BAGGAGE:&nbsp;
+                                                                span INCLUDED
+                                                            p.text14.colorBlack85.mb5 Carry10kg 22lbupto 45li 115lcm
+                                            .formBox__baggage__text
+                                                p.text12.medium.colorBlack85 Baggage allowance and charges are applied for the whole trip.
+                                                p.text12.colorBlack55 Baggage allowance and fees are provided for information only.
+                                                p.text12.colorBlack55 Additional allowance may apply depending on the traveler's individual passenger status (e.g. Saga Club membership)
+
+                            .formBox
+                                h2.color1.mb15 Payment option
+                                .formBox__body
+                                    .formBox__item
+                                        .formBox__payment
+                                            .formBox__payment__item
+                                                .radio
+                                                    input#fl11(type='radio', name='fl' checked='')
+                                                    label(for='fl11') Pay by Credit/Debit Cards
+                                                ul.formBox__payment__card
+                                                    li
+                                                        img(src='images/jcb.png')
+                                                    li
+                                                        img(src='images/visa.png')
+                                                    li
+                                                        img(src='images/mastercard.png')
+                                                    li
+                                                        img(src='images/card-dinner.png')
+                                            .formBox__payment__item
+                                                .radio
+                                                    input#fl22(type='radio', name='fl')
+                                                    label(for='fl22') Pay later
+                            .formBox
+                                h2.color1.mb15 Term of Use
+                                .formBox__body
+                                    .formBox__item
+                                        .formBox__term
+                                            p.title Term of Use
+                                            p Conditions of website use
+                                            p By accessing and using our website for any purpose of searching, referencing or booking, you acknowledge that you’re fully understanding and accepting, as well as agreeing not to violate our Terms and Conditions.
+                                            p We recommend you to read the following terms and conditions carefully before purchasing our products. If you object to any of it please leave this website immediately.
+                                            p Please also be noted that Cambodia reserves the rights to cancel or terminate any booking if it’s in such case:
+                                            ul
+                                                li (i) required by law.
+                                                li (ii) payment is not made in time.
+                                                li (iii) ticket availability issues.
+                                                li (iv) system errors or any technical problems that may cause us in processing customer’s request.
+
+
+                                            p Conditions of website use
+                                            p By accessing and using our website for any purpose of searching, referencing or booking, you acknowledge that you’re fully understanding and accepting, as well as agreeing not to violate our Terms and Conditions.
+                                            p We recommend you to read the following terms and conditions carefully before purchasing our products. If you object to any of it please leave this website immediately.
+                                            p Please also be noted that Cambodia reserves the rights to cancel or terminate any booking if it’s in such case:
+                                            ul
+                                                li (i) required by law.
+                                                li (ii) payment is not made in time.
+                                                li (iii) ticket availability issues.
+                                                li (iv) system errors or any technical problems that may cause us in processing customer’s request.
+
+
+                        .flightReview__checkbox
+                            .checkbox
+                                input#pp13(type='checkbox')
+                                label(for='pp13')
+                                    | I have read and agree to all the&nbsp;
+                                    a.aLink(href='termsOfUse.html') Term of Use
+                                    | &nbsp;specified.
+                        .flightReview__btn
+                            a.btn.btn-orange-1(href='flightPayment.html') Continue
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.subMenu__child').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart date',
+                titleCheckOut: 'Return date',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '<i class="fas fa-calendar-alt"></i>',
+                iconArrowTop: false
+            });
+        script.
+            $('.btnDetail').click(function () {
+                $(this).toggleClass('rotate');
+                $(this).parents('.formBox__price__detail').find('.costBox').slideToggle(200);
+            });
+
+
+
+
+
+
+

@@ -5,6 +5,23 @@
       padding: 3vw 0;
     }
   }
+  &__btn{
+    text-align: right;
+    @include breakpoint(xs){
+      padding: 15px 0;
+    }
+    @include breakpoint(sm){
+      padding: 2vw 0;
+    }
+    .btn{
+      @include breakpoint(xs){
+        min-width: 125px;
+      }
+      @include breakpoint(sm){
+        min-width: 10vw;
+      }
+    }
+  }
 }
 .modal-flightDetail{
   @include breakpoint(sm){

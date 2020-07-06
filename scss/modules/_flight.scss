@@ -451,12 +451,9 @@
   }
 }
 .orderCode{
-  @include breakpoint(xs){
-    padding-right: 15px;
-  }
+  margin-bottom: 30px;
   @include breakpoint(sm){
-    text-align: right;
-    padding-left: 1vw;
+    margin-bottom: 2vw;
   }
   &__label{
     font-size: 16px;
