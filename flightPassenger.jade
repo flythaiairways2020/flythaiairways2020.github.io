@@ -1,0 +1,645 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.flightPassenger
+                .flightHeader
+                    .container
+                        .flightHeader__left
+                            .flightStep
+                                .flightStep__item
+                                    .flightStep__numb 1
+                                    .flightStep__text Select Flight
+                                .flightStep__item.active
+                                    .flightStep__numb 2
+                                    .flightStep__text Passenger
+                                .flightStep__item
+                                    .flightStep__numb 3
+                                    .flightStep__text Review
+                                .flightStep__item
+                                    .flightStep__numb 4
+                                    .flightStep__text Payment
+                            .flightStepMobile 02. Passenger
+                .flightPassenger__main
+                    .container
+                        .yourSelection
+                            h2.color1.mb15 Trip Summary
+                            .yourSelection__box
+                                .yourSelection__row
+                                    .yourSelection__col
+                                        .yourSelection__item
+                                            .yourSelection__title
+                                                h4.text16.color1.medium Departing flight
+                                                p.text14.colorBlack65 Wednesday, 15 January 2020
+                                            .yourSelection__group
+                                                .d-block
+                                                    p.text18.medium.color1 15:35 HAN
+                                                    p.text12.color1.medium Hanoi, Vietnam
+                                                .d-block
+                                                    .text-center
+                                                        .yourSelection__time 2h05m
+                                                        p.text12.medium.mt5
+                                                            span.colorGreen None Stop
+                                                .d-block
+                                                    p.text18.medium.color1 17: 40 BKK
+                                                    p.text12.color1.medium Bangkok, Thailand
+                                            p.text14.colorBlack65.mt15 Economy saver
+                                    .yourSelection__col
+                                        .yourSelection__item
+                                            .yourSelection__title
+                                                h4.text16.color1.medium Return flight
+                                                p.text14.colorBlack65 Wednesday, 20 January 2020
+                                            .yourSelection__group
+                                                .d-block
+                                                    p.text18.medium.color1 17: 40 BKK
+                                                    p.text12.color1.medium Bangkok, Thailand
+                                                .d-block
+                                                    .text-center
+                                                        .yourSelection__time 2h05m
+                                                        p.text12.medium.mt5
+                                                            span.colorRed 2 Stop&nbsp;
+                                                            span (SGN,DAD)
+                                                .d-block
+                                                    p.text18.medium.color1 15:35 HAN
+                                                    p.text12.color1.medium Hanoi, Vietnam
+                                            p.text14.colorBlack65.mt15 Economy saver
+                                .yourSelection__traveler
+                                    p
+                                        svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.55')
+                                        span Traveler/s
+                                    p 2 adult
+                                ul.yourSelection__list
+                                    li
+                                        p Air Transportation Charges
+                                        p USD 600.44
+                                    li
+                                        p Taxes, Fees and Charges
+                                        p USD 40.66
+                                .yourSelection__total
+                                    p.text16.color1.medium.color1 Total
+                                    p.color2
+                                        span.text20 USD&nbsp;
+                                        strong.text24 641.10
+
+                        .passengerDetail
+                            h2.color1.mb15 Passenger details
+                            .passengerDetail__main
+                                .passengerDetail__left
+                                    ul.passengerDetail__tab
+                                        li.active(data-tab='tab-1')
+                                            button(type='button')
+                                                span Adult 1
+                                        li(data-tab='tab-2')
+                                            button(type='button')
+                                                span Child 1
+                                        li(data-tab='tab-3')
+                                            button(type='button')
+                                                span Infant 1
+                                        li(data-tab='tab-4')
+                                            button(type='button')
+                                                span Contact infomation
+                                .passengerDetail__right
+                                    #tab-1.passengerDetail__box.open
+                                        .formBox
+                                            .formBox__text
+                                                h4.mb5.color1 Adult 1
+                                                p.text12.colorBlack55 *Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).
+                                                button.formBox__tip(type='button' data-toggle="modal" data-target="#tipsModal")
+                                                    svg.svg1(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                                    span Tips on entering your name
+                                            .formBox__row
+                                                .form-group
+                                                    label Title
+                                                    select.form-control
+                                                        option Title 1
+                                                        option Title 2
+                                            .formBox__row
+                                                .form-group
+                                                    label.labelStar First/Given
+                                                    input.form-control(type='text' placeholder='First/Given')
+                                                .form-group
+                                                    label.labelStar Middle Name
+                                                    input.form-control(type='text' placeholder='Middle Name')
+                                                .form-group
+                                                    label.labelStar Last/ Family Name
+                                                    input.form-control(type='text' placeholder='Last/ Family Name')
+                                            .formBox__row
+                                                .checkbox
+                                                    input#pp13(type='checkbox')
+                                                    label(for='pp13') This passenger does not have a first/given name in the passport
+                                            .formBox__row
+                                                .formBox__date
+                                                    label.labelStar Date of Birth
+                                                    .d-flex
+                                                        .form-group
+                                                            select.form-control
+                                                                option Day
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                                        .form-group
+                                                            select.form-control
+                                                                option Month
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                                        .form-group
+                                                            select.form-control
+                                                                option Year
+                                                                option 2020
+                                                                option 2019
+                                                                option 2018
+
+                                            .formBox__frequent
+                                                button(type='button')
+                                                    span Add frequent Flyer
+                                                    svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+                                                .frequentBox
+                                                    .frequentBox__cont
+                                                        .form-group
+                                                            label Select
+                                                            select.form-control
+                                                                option Select 1
+                                                                option Select 2
+                                                        .form-group
+                                                            label Card Number
+                                                            input.form-control(type='text' placeholder='Card Number')
+                                            .formBox__text
+                                                h4.mb5.color1 Passport detail
+                                            .formBox__row
+                                                .form-group
+                                                    label Passport Number
+                                                    input.form-control(type='text' placeholder='Passport Number')
+                                                .form-group
+                                                    label Nationality
+                                                    input.form-control(type='text' placeholder='Nationality')
+                                                .form-group
+                                                    label Date of Issued
+                                                    input.form-control(type='text' placeholder='Date of Issued')
+
+
+                                                .form-group
+                                                    label Date of Expired
+                                                    input.form-control(type='text' placeholder='Date of Expired')
+                                            .formBox__btn
+                                                button.btn.btn-orange-1(type='button')
+                                                    span NEXT PASSENGER
+                                    #tab-2.passengerDetail__box
+                                        .formBox
+                                            .formBox__text
+                                                h4.mb5.color1 Child 1
+                                                p.text12.colorBlack55 *Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).
+                                                button.formBox__tip(type='button' data-toggle="modal" data-target="#tipsModal")
+                                                    svg.svg1(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                                    span Tips on entering your name
+                                            .formBox__row
+                                                .form-group
+                                                    label Title
+                                                    select.form-control
+                                                        option Title 1
+                                                        option Title 2
+                                            .formBox__row
+                                                .form-group
+                                                    label.labelStar First/Given
+                                                    input.form-control(type='text' placeholder='First/Given')
+                                                .form-group
+                                                    label.labelStar Middle Name
+                                                    input.form-control(type='text' placeholder='Middle Name')
+                                                .form-group
+                                                    label.labelStar Last/ Family Name
+                                                    input.form-control(type='text' placeholder='Last/ Family Name')
+                                            .formBox__row
+                                                .checkbox
+                                                    input#pp13(type='checkbox')
+                                                    label(for='pp13') This passenger does not have a first/given name in the passport
+                                            .formBox__row
+                                                .formBox__date
+                                                    label.labelStar Date of Birth
+                                                    .d-flex
+                                                        .form-group
+                                                            select.form-control
+                                                                option Day
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                                        .form-group
+                                                            select.form-control
+                                                                option Month
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                                        .form-group
+                                                            select.form-control
+                                                                option Year
+                                                                option 2020
+                                                                option 2019
+                                                                option 2018
+
+                                            .formBox__frequent
+                                                button(type='button')
+                                                    span Add frequent Flyer
+                                                    svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+                                                .frequentBox
+                                                    .frequentBox__cont
+                                                        .form-group
+                                                            label Select
+                                                            select.form-control
+                                                                option Select 1
+                                                                option Select 2
+                                                        .form-group
+                                                            label Card Number
+                                                            input.form-control(type='text' placeholder='Card Number')
+                                            .formBox__text
+                                                h4.mb5.color1 Passport detail
+                                            .formBox__row
+                                                .form-group
+                                                    label Passport Number
+                                                    input.form-control(type='text' placeholder='Passport Number')
+                                                .form-group
+                                                    label Nationality
+                                                    input.form-control(type='text' placeholder='Nationality')
+                                                .form-group
+                                                    label Date of Issued
+                                                    input.form-control(type='text' placeholder='Date of Issued')
+
+
+                                                .form-group
+                                                    label Date of Expired
+                                                    input.form-control(type='text' placeholder='Date of Expired')
+                                            .formBox__btn
+                                                button.btn.btn-orange-1(type='button')
+                                                    span NEXT PASSENGER
+                                    #tab-3.passengerDetail__box
+                                        .formBox
+                                            .formBox__text
+                                                h4.mb5.color1 Infant 1
+                                                p.text12.colorBlack55 *Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).
+                                                button.formBox__tip(type='button' data-toggle="modal" data-target="#tipsModal")
+                                                    svg.svg1(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                                    span Tips on entering your name
+                                            .formBox__row
+                                                .form-group
+                                                    label Title
+                                                    select.form-control
+                                                        option Title 1
+                                                        option Title 2
+                                            .formBox__row
+                                                .form-group
+                                                    label.labelStar First/Given
+                                                    input.form-control(type='text' placeholder='First/Given')
+                                                .form-group
+                                                    label.labelStar Middle Name
+                                                    input.form-control(type='text' placeholder='Middle Name')
+                                                .form-group
+                                                    label.labelStar Last/ Family Name
+                                                    input.form-control(type='text' placeholder='Last/ Family Name')
+                                            .formBox__row
+                                                .checkbox
+                                                    input#pp13(type='checkbox')
+                                                    label(for='pp13') This passenger does not have a first/given name in the passport
+                                            .formBox__row
+                                                .formBox__date
+                                                    label.labelStar Date of Birth
+                                                    .d-flex
+                                                        .form-group
+                                                            select.form-control
+                                                                option Day
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                                        .form-group
+                                                            select.form-control
+                                                                option Month
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                                        .form-group
+                                                            select.form-control
+                                                                option Year
+                                                                option 2020
+                                                                option 2019
+                                                                option 2018
+
+                                            .formBox__frequent
+                                                button(type='button')
+                                                    span Add frequent Flyer
+                                                    svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+                                                .frequentBox
+                                                    .frequentBox__cont
+                                                        .form-group
+                                                            label Select
+                                                            select.form-control
+                                                                option Select 1
+                                                                option Select 2
+                                                        .form-group
+                                                            label Card Number
+                                                            input.form-control(type='text' placeholder='Card Number')
+                                            .formBox__text
+                                                h4.mb5.color1 Passport detail
+                                            .formBox__row
+                                                .form-group
+                                                    label Passport Number
+                                                    input.form-control(type='text' placeholder='Passport Number')
+                                                .form-group
+                                                    label Nationality
+                                                    input.form-control(type='text' placeholder='Nationality')
+                                                .form-group
+                                                    label Date of Issued
+                                                    input.form-control(type='text' placeholder='Date of Issued')
+
+
+                                                .form-group
+                                                    label Date of Expired
+                                                    input.form-control(type='text' placeholder='Date of Expired')
+                                            .formBox__btn
+                                                button.btn.btn-orange-1(type='button')
+                                                    span NEXT PASSENGER
+                                    #tab-4.passengerDetail__box
+                                        .formBox
+                                            .formBox__text
+                                                h4.mb5.color1 Contact information
+                                                p.text14.colorBlack85 (Country Code) + (Phone Number). Ex: (+66) (1234567)
+                                                p.text12.colorBlack55 * Please fill in your mobile phone number to receive notification or any changes in your flight itinerary.
+                                            .formBox__row
+                                                .form-group
+                                                    label.labelStar Country Code
+                                                    input.form-control(type='text' placeholder='Country Code')
+                                                .form-group
+                                                    label.labelStar Phone Number
+                                                    input.form-control(type='text' placeholder='Phone Number')
+                                                .form-group
+                                                    label.labelStar Your Email
+                                                    input.form-control(type='text' placeholder='Your Email')
+                                                .form-group
+                                                    label.labelStar Comfirm Email Address
+                                                    input.form-control(type='text' placeholder='Comfirm Email Address')
+                                            .formBox__frequent
+                                                button(type='button')
+                                                    span Special Request
+                                                    svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+                                                .frequentBox
+                                                    .frequentBox__cont
+                                                        .d-block.w-100
+                                                            textarea.form-control(placeholder='Your Special Request')
+                        .textNote
+                            .textNote__icon
+                                svg.svg1point5(width='100', height='69', viewBox='0 0 100 69', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M89.504 31.7598C90.0377 28.8081 89.7612 25.7669 88.704 22.9598C87.4974 19.7501 85.4117 16.9449 82.6854 14.8652C79.9591 12.7854 76.7024 11.5152 73.288 11.1998C68.5033 10.7209 63.7189 12.1113 59.936 15.0798C58.0915 10.6001 54.9528 6.7724 50.9212 4.08612C46.8897 1.39983 42.1485 -0.0229238 37.304 -0.000220756H37.112C24.648 0.0957792 13.856 9.99978 13.112 22.0878C12.9375 24.899 13.2902 27.7182 14.152 30.3998C10.1463 31.2928 6.56345 33.5215 3.99174 36.7197C1.42002 39.918 0.0123843 43.8958 0 47.9998C0 57.7598 6.312 68.1918 24 68.1918H81.24C92.44 68.1918 100.016 57.7918 100.016 48.0318C99.9879 44.6017 98.9846 41.2504 97.1232 38.3691C95.2619 35.4878 92.6193 33.1955 89.504 31.7598Z', fill='#81BE33')
+                                    path(d='M47.4393 36.9519C47.3995 36.5035 47.4498 36.0517 47.5872 35.6231C47.7246 35.1944 47.9463 34.7976 48.2393 34.4559C48.3872 34.2867 48.5476 34.1289 48.7193 33.9839L50.1033 32.9599C50.5578 32.6262 51.0874 32.4094 51.6454 32.3285C52.2034 32.2476 52.7727 32.3051 53.3033 32.4959L56.8073 33.8079C56.8707 33.8307 56.939 33.836 57.0051 33.8233C57.0713 33.8107 57.1328 33.7805 57.1833 33.7359C57.2341 33.6893 57.2708 33.6293 57.2892 33.5628C57.3076 33.4963 57.3069 33.426 57.2873 33.3599C57.1778 32.7985 56.9334 32.2721 56.5753 31.8261C56.2171 31.3802 55.7559 31.028 55.2313 30.7999L49.4473 28.3199C49.3806 28.2927 49.3237 28.2462 49.2838 28.1863C49.2438 28.1264 49.2228 28.0559 49.2233 27.9839V26.3279C49.2243 26.2286 49.2646 26.1336 49.3353 26.0639C50.1035 25.1496 50.5105 23.9857 50.4793 22.7919C50.487 22.6909 50.5327 22.5965 50.6073 22.5279C50.8745 22.2584 51.0834 21.9367 51.221 21.583C51.3586 21.2294 51.422 20.8511 51.4073 20.4719C51.4302 19.9371 51.2661 19.4109 50.9433 18.9839C50.9 18.9294 50.872 18.8644 50.8622 18.7955C50.8523 18.7266 50.861 18.6563 50.8873 18.5919C51.2888 17.8103 51.3994 16.9115 51.1993 16.0559C50.6953 14.0159 48.1913 13.2959 46.2073 13.2959C45.3337 13.2259 44.456 13.3658 43.6474 13.7039C42.8389 14.0421 42.1229 14.5687 41.5593 15.2399C41.525 15.2919 41.4788 15.335 41.4246 15.3656C41.3703 15.3962 41.3095 15.4135 41.2473 15.4159C40.9989 15.3969 40.7494 15.4362 40.5189 15.5307C40.2883 15.6251 40.083 15.7721 39.9193 15.9599C39.3753 16.6879 39.7753 17.6799 40.1833 18.5119C40.2154 18.5802 40.2258 18.6568 40.2129 18.7313C40.2 18.8057 40.1645 18.8743 40.1113 18.9279C40.0248 19.019 39.9471 19.1181 39.8793 19.2239C39.6146 19.6478 39.481 20.1404 39.4953 20.6399C39.4715 21.0193 39.545 21.3984 39.7088 21.7414C39.8726 22.0844 40.1213 22.3799 40.4313 22.5999C40.4798 22.6295 40.5205 22.6705 40.5497 22.7192C40.579 22.768 40.596 22.8231 40.5993 22.8799C40.5941 24.0648 41.037 25.2079 41.8393 26.0799C41.8773 26.1125 41.9077 26.153 41.9285 26.1986C41.9492 26.2442 41.9597 26.2938 41.9593 26.3439V27.9999C41.9593 28.0728 41.9382 28.1441 41.8984 28.2052C41.8586 28.2662 41.802 28.3144 41.7353 28.3439L35.9513 30.8239C34.0873 31.6239 33.8153 33.3279 33.4473 35.6799C33.3673 36.2079 33.2713 36.7839 33.1513 37.4159C33.1185 37.6077 33.1621 37.8046 33.2727 37.9646C33.3834 38.1246 33.5523 38.2349 33.7433 38.2719H47.3433C47.4 38.2716 47.4558 38.2577 47.5059 38.2312C47.5561 38.2047 47.5991 38.1666 47.6313 38.1199C47.6663 38.0722 47.689 38.0165 47.6974 37.9579C47.7058 37.8993 47.6995 37.8395 47.6793 37.7839C47.5636 37.5181 47.4829 37.2385 47.4393 36.9519Z', fill='white')
+                                    path(d='M64.8008 34.68C64.4452 34.6004 64.077 34.5949 63.7192 34.6637C63.3614 34.7325 63.0215 34.8742 62.7208 35.08L59.7848 37.08C59.733 37.1073 59.6753 37.1216 59.6168 37.1216C59.5582 37.1216 59.5006 37.1073 59.4488 37.08L52.6168 34.536C52.426 34.4654 52.2206 34.4438 52.0194 34.4732C51.8181 34.5025 51.6274 34.5819 51.4648 34.704L50.1448 35.688C50.0778 35.7375 50.0162 35.7938 49.9608 35.856C49.8485 35.9836 49.7645 36.1336 49.7145 36.2961C49.6645 36.4586 49.6496 36.6298 49.6708 36.7985C49.692 36.9671 49.7488 37.1294 49.8374 37.2745C49.926 37.4195 50.0444 37.5441 50.1848 37.64L54.1848 40.104C54.2264 40.1286 54.2627 40.1613 54.2913 40.2003C54.32 40.2392 54.3406 40.2835 54.3518 40.3305C54.363 40.3776 54.3646 40.4264 54.3565 40.474C54.3485 40.5217 54.3309 40.5673 54.3048 40.608C54.2814 40.6476 54.2484 40.6806 54.2088 40.704L52.8088 41.752C52.7488 41.7933 52.6776 41.8154 52.6048 41.8154C52.5319 41.8154 52.4608 41.7933 52.4008 41.752L50.6088 40.8C50.4252 40.7337 50.2275 40.7166 50.0353 40.7503C49.843 40.7839 49.6629 40.8673 49.5128 40.992L48.2408 42.064C48.1729 42.1212 48.1088 42.1827 48.0488 42.248C47.8701 42.4745 47.7843 42.7605 47.8088 43.048C47.8252 43.2057 47.8742 43.3582 47.9527 43.4959C48.0312 43.6336 48.1375 43.7535 48.2648 43.848L52.4888 46.808C52.7208 46.9734 52.9967 47.0663 53.2815 47.0748C53.5663 47.0833 53.8473 47.0072 54.0888 46.856L65.6328 39.656C66.0282 39.4048 66.3532 39.0571 66.5771 38.6456C66.8011 38.2342 66.9166 37.7724 66.9128 37.304C66.9143 37.0014 66.8629 36.7009 66.7608 36.416C66.6033 35.987 66.3418 35.6038 65.9997 35.3008C65.6577 34.9978 65.2457 34.7845 64.8008 34.68Z', fill='white')
+                                    path(d='M79.8 28.5038C86.8692 28.5038 92.6 22.7731 92.6 15.7038C92.6 8.63456 86.8692 2.90381 79.8 2.90381C72.7308 2.90381 67 8.63456 67 15.7038C67 22.7731 72.7308 28.5038 79.8 28.5038Z', fill='white')
+                                    path(d='M79.8 4.90381C77.664 4.90381 75.5759 5.53722 73.7998 6.72394C72.0238 7.91066 70.6395 9.59739 69.8221 11.5708C69.0047 13.5443 68.7908 15.7158 69.2075 17.8108C69.6242 19.9058 70.6528 21.8302 72.1632 23.3406C73.6737 24.851 75.598 25.8796 77.693 26.2963C79.788 26.713 81.9595 26.4991 83.933 25.6817C85.9064 24.8643 87.5932 23.48 88.7799 21.704C89.9666 19.9279 90.6 17.8398 90.6 15.7038C90.6011 14.2852 90.3224 12.8804 89.78 11.5696C89.2377 10.2588 88.4422 9.06779 87.4391 8.06471C86.436 7.06163 85.245 6.26615 83.9342 5.72377C82.6234 5.18139 81.2186 4.90276 79.8 4.90381ZM85.264 13.5998L80.464 19.9998C80.246 20.2921 79.9671 20.5336 79.6467 20.7076C79.3263 20.8817 78.9719 20.9841 78.608 21.0078H78.4C77.7254 21.0067 77.0785 20.7393 76.6 20.2638L74.12 17.7758C73.8686 17.5414 73.7206 17.2166 73.7086 16.8731C73.6966 16.5295 73.8216 16.1952 74.056 15.9438C74.2905 15.6924 74.6152 15.5444 74.9588 15.5324C75.3023 15.5204 75.6366 15.6454 75.888 15.8798L75.952 15.9438L77.728 17.7198C77.8912 17.8805 78.111 17.9707 78.34 17.9707C78.569 17.9707 78.7889 17.8805 78.952 17.7198L79.032 17.6238L83.2 11.9998C83.3051 11.8638 83.4359 11.7497 83.585 11.6642C83.7341 11.5788 83.8986 11.5235 84.0691 11.5016C84.2396 11.4796 84.4128 11.4915 84.5786 11.5365C84.7445 11.5815 84.9 11.6588 85.036 11.7638C85.1721 11.8689 85.2861 11.9997 85.3716 12.1488C85.4571 12.2979 85.5123 12.4624 85.5343 12.6329C85.5562 12.8034 85.5443 12.9766 85.4993 13.1425C85.4543 13.3084 85.3771 13.4638 85.272 13.5998H85.264Z', fill='#81BE33')
+                                    path(d='M25.5996 55.9998C25.5996 55.9078 25.5636 55.8194 25.4994 55.7537C25.4351 55.6879 25.3476 55.6499 25.2556 55.6478H23.2556C23.2323 55.6478 23.2099 55.6385 23.1934 55.622C23.1769 55.6055 23.1676 55.5831 23.1676 55.5598L24.1676 53.8238C24.1904 53.7844 24.2052 53.741 24.2112 53.6959C24.2171 53.6508 24.214 53.605 24.2021 53.5611C24.1902 53.5172 24.1697 53.4761 24.1418 53.4401C24.1139 53.4042 24.0792 53.3742 24.0396 53.3518L23.1996 52.7998C23.1189 52.7533 23.0231 52.7407 22.9332 52.7647C22.8432 52.7886 22.7664 52.8473 22.7196 52.9278L21.7276 54.6558C21.7113 54.671 21.6899 54.6794 21.6676 54.6794C21.6453 54.6794 21.6239 54.671 21.6076 54.6558L20.6076 52.9198C20.5594 52.8409 20.4826 52.7835 20.3932 52.7597C20.3039 52.7359 20.2087 52.7474 20.1276 52.7918L19.2236 53.3198C19.184 53.3422 19.1493 53.3722 19.1214 53.4081C19.0935 53.4441 19.073 53.4852 19.0611 53.5291C19.0492 53.573 19.0461 53.6188 19.0521 53.6639C19.058 53.709 19.0728 53.7524 19.0956 53.7918L19.9996 55.5278C20.0148 55.5441 20.0232 55.5655 20.0232 55.5878C20.0232 55.61 20.0148 55.6315 19.9996 55.6478H17.9516C17.8583 55.6478 17.7687 55.6849 17.7027 55.7509C17.6367 55.8169 17.5996 55.9064 17.5996 55.9998V57.0398C17.5996 57.1331 17.6367 57.2227 17.7027 57.2887C17.7687 57.3547 17.8583 57.3918 17.9516 57.3918H19.9516C19.9628 57.3917 19.9739 57.394 19.9842 57.3985C19.9945 57.403 20.0037 57.4097 20.0112 57.418C20.0187 57.4263 20.0245 57.4361 20.028 57.4467C20.0315 57.4573 20.0327 57.4686 20.0316 57.4798L19.0316 59.2158C19.0088 59.2551 18.994 59.2986 18.9881 59.3437C18.9821 59.3888 18.9852 59.4346 18.9971 59.4785C19.009 59.5224 19.0295 59.5635 19.0574 59.5994C19.0853 59.6353 19.12 59.6654 19.1596 59.6878L20.0636 60.2158C20.1443 60.2623 20.2401 60.2749 20.33 60.2509C20.42 60.2269 20.4968 60.1683 20.5436 60.0878L21.5356 58.3998C21.5519 58.3846 21.5733 58.3761 21.5956 58.3761C21.6179 58.3761 21.6393 58.3846 21.6556 58.3998L22.6556 60.1358C22.678 60.1754 22.7081 60.2101 22.744 60.238C22.7799 60.2659 22.821 60.2864 22.8649 60.2983C22.9088 60.3102 22.9546 60.3132 22.9997 60.3073C23.0448 60.3014 23.0883 60.2866 23.1276 60.2638L24.0316 59.7358C24.0712 59.7134 24.1059 59.6833 24.1338 59.6474C24.1617 59.6115 24.1822 59.5704 24.1941 59.5265C24.206 59.4826 24.2091 59.4368 24.2032 59.3917C24.1972 59.3466 24.1824 59.3031 24.1596 59.2638L23.1996 57.5278C23.186 57.5108 23.1785 57.4896 23.1785 57.4678C23.1785 57.446 23.186 57.4248 23.1996 57.4078H25.2476C25.2935 57.4078 25.3389 57.3986 25.3811 57.3808C25.4234 57.3631 25.4617 57.337 25.4937 57.3042C25.5258 57.2714 25.5509 57.2325 25.5678 57.1899C25.5846 57.1472 25.5927 57.1016 25.5916 57.0558L25.5996 55.9998Z', fill='white')
+                                    path(d='M39.815 55.9997C39.815 55.9063 39.7779 55.8168 39.7119 55.7508C39.6459 55.6848 39.5564 55.6477 39.463 55.6477H37.463C37.4397 55.6477 37.4173 55.6384 37.4008 55.6219C37.3843 55.6054 37.375 55.583 37.375 55.5597L38.399 53.7917C38.4218 53.7523 38.4366 53.7089 38.4426 53.6638C38.4485 53.6187 38.4454 53.5729 38.4335 53.529C38.4216 53.4851 38.4011 53.444 38.3732 53.408C38.3453 53.3721 38.3106 53.3421 38.271 53.3197L37.351 52.7997C37.3117 52.7768 37.2682 52.762 37.2231 52.7561C37.178 52.7502 37.1322 52.7533 37.0883 52.7652C37.0444 52.7771 37.0033 52.7976 36.9674 52.8255C36.9315 52.8534 36.9014 52.8881 36.879 52.9277L35.879 54.6557C35.8627 54.6709 35.8413 54.6793 35.819 54.6793C35.7967 54.6793 35.7753 54.6709 35.759 54.6557L34.759 52.9197C34.7123 52.8413 34.6369 52.7842 34.5489 52.7603C34.4608 52.7364 34.3669 52.7477 34.287 52.7917L33.375 53.3197C33.3354 53.3421 33.3007 53.3721 33.2728 53.408C33.2449 53.444 33.2244 53.4851 33.2125 53.529C33.2006 53.5729 33.1975 53.6187 33.2035 53.6638C33.2094 53.7089 33.2242 53.7523 33.247 53.7917L34.247 55.5277C34.2555 55.5352 34.2623 55.5444 34.267 55.5548C34.2717 55.5651 34.2741 55.5763 34.2741 55.5877C34.2741 55.599 34.2717 55.6102 34.267 55.6206C34.2623 55.6309 34.2555 55.6402 34.247 55.6477H32.143C32.0497 55.6477 31.9601 55.6848 31.8941 55.7508C31.8281 55.8168 31.791 55.9063 31.791 55.9997V57.0397C31.791 57.133 31.8281 57.2226 31.8941 57.2886C31.9601 57.3546 32.0497 57.3917 32.143 57.3917H34.143C34.1664 57.3917 34.1887 57.4009 34.2052 57.4174C34.2217 57.4339 34.231 57.4563 34.231 57.4797L33.231 59.2157C33.187 59.2956 33.1758 59.3895 33.1997 59.4775C33.2235 59.5656 33.2807 59.6409 33.359 59.6877L34.271 60.2157C34.3103 60.2385 34.3538 60.2533 34.3989 60.2592C34.444 60.2651 34.4898 60.2621 34.5337 60.2502C34.5776 60.2383 34.6187 60.2178 34.6546 60.1899C34.6906 60.162 34.7206 60.1272 34.743 60.0877L35.727 58.3997C35.7433 58.3845 35.7647 58.376 35.787 58.376C35.8093 58.376 35.8307 58.3845 35.847 58.3997L36.847 60.1357C36.8938 60.2161 36.9706 60.2748 37.0606 60.2988C37.1505 60.3228 37.2463 60.3102 37.327 60.2637L38.231 59.7357C38.2706 59.7133 38.3053 59.6832 38.3332 59.6473C38.3611 59.6114 38.3816 59.5703 38.3935 59.5264C38.4054 59.4825 38.4085 59.4367 38.4026 59.3916C38.3966 59.3465 38.3818 59.303 38.359 59.2637L37.359 57.5277C37.3454 57.5106 37.338 57.4895 37.338 57.4677C37.338 57.4459 37.3454 57.4247 37.359 57.4077H39.399C39.4924 57.4077 39.5819 57.3706 39.6479 57.3046C39.7139 57.2386 39.751 57.149 39.751 57.0557L39.815 55.9997Z', fill='white')
+                                    path(d='M54.0083 55.9998C54.0083 55.9078 53.9723 55.8194 53.908 55.7537C53.8437 55.6879 53.7562 55.6499 53.6643 55.6478H51.6643C51.6409 55.6478 51.6186 55.6385 51.6021 55.622C51.5856 55.6055 51.5763 55.5831 51.5763 55.5598L52.5763 53.8238C52.5991 53.7844 52.6139 53.741 52.6198 53.6959C52.6257 53.6508 52.6227 53.605 52.6108 53.5611C52.5989 53.5172 52.5784 53.4761 52.5505 53.4401C52.5226 53.4042 52.4879 53.3742 52.4483 53.3518L51.5523 52.7998C51.4716 52.7533 51.3758 52.7407 51.2858 52.7647C51.1959 52.7886 51.1191 52.8473 51.0723 52.9278L50.0723 54.6558C50.0573 54.6704 50.0372 54.6786 50.0163 54.6786C49.9953 54.6786 49.9752 54.6704 49.9603 54.6558L48.9603 52.9198C48.912 52.8409 48.8353 52.7835 48.7459 52.7597C48.6565 52.7359 48.5614 52.7474 48.4803 52.7918L47.5763 53.3198C47.5367 53.3422 47.502 53.3722 47.4741 53.4081C47.4462 53.4441 47.4257 53.4852 47.4138 53.5291C47.4019 53.573 47.3988 53.6188 47.4047 53.6639C47.4106 53.709 47.4255 53.7524 47.4483 53.7918L48.4483 55.5278C48.4635 55.5441 48.4719 55.5655 48.4719 55.5878C48.4719 55.61 48.4635 55.6315 48.4483 55.6478H46.3363C46.2443 55.6499 46.1568 55.6879 46.0925 55.7537C46.0282 55.8194 45.9923 55.9078 45.9923 55.9998V57.0398C45.9912 57.0856 45.9993 57.1312 46.0161 57.1739C46.0329 57.2165 46.0581 57.2554 46.0902 57.2882C46.1222 57.321 46.1605 57.3471 46.2028 57.3648C46.245 57.3826 46.2904 57.3918 46.3363 57.3918H48.3363C48.3596 57.3918 48.382 57.401 48.3985 57.4175C48.415 57.4341 48.4243 57.4564 48.4243 57.4798L47.4243 59.2158C47.4014 59.2551 47.3866 59.2986 47.3807 59.3437C47.3748 59.3888 47.3779 59.4346 47.3898 59.4785C47.4017 59.5224 47.4222 59.5635 47.4501 59.5994C47.478 59.6353 47.5127 59.6654 47.5523 59.6878L48.4563 60.2158C48.537 60.2623 48.6328 60.2749 48.7227 60.2509C48.8127 60.2269 48.8895 60.1683 48.9363 60.0878L49.9283 58.3998C49.9446 58.3846 49.966 58.3761 49.9883 58.3761C50.0105 58.3761 50.032 58.3846 50.0483 58.3998L51.0483 60.1358C51.0707 60.1754 51.1007 60.2101 51.1367 60.238C51.1726 60.2659 51.2137 60.2864 51.2576 60.2983C51.3015 60.3102 51.3473 60.3132 51.3924 60.3073C51.4375 60.3014 51.4809 60.2866 51.5203 60.2638L52.4243 59.7358C52.4639 59.7134 52.4986 59.6833 52.5265 59.6474C52.5544 59.6115 52.5749 59.5704 52.5868 59.5265C52.5987 59.4826 52.6017 59.4368 52.5958 59.3917C52.5899 59.3466 52.5751 59.3031 52.5523 59.2638L51.5523 57.5278C51.5386 57.5108 51.5312 57.4896 51.5312 57.4678C51.5312 57.446 51.5386 57.4248 51.5523 57.4078H53.6003C53.6461 57.4078 53.6915 57.3986 53.7338 57.3808C53.7761 57.3631 53.8143 57.337 53.8464 57.3042C53.8784 57.2714 53.9036 57.2325 53.9204 57.1899C53.9372 57.1472 53.9453 57.1016 53.9443 57.0558L54.0083 55.9998Z', fill='white')
+                                    path(d='M68.2076 55.9998C68.2076 55.9064 68.1705 55.8169 68.1045 55.7509C68.0385 55.6849 67.9489 55.6478 67.8556 55.6478H65.8556C65.8323 55.6478 65.8099 55.6385 65.7934 55.622C65.7769 55.6055 65.7676 55.5831 65.7676 55.5598L66.7676 53.8238C66.8116 53.7438 66.8228 53.65 66.7989 53.5619C66.7751 53.4739 66.7179 53.3985 66.6396 53.3518L65.7436 52.7998C65.7043 52.7769 65.6608 52.7621 65.6157 52.7562C65.5706 52.7503 65.5248 52.7534 65.4809 52.7653C65.437 52.7772 65.3959 52.7977 65.36 52.8256C65.324 52.8535 65.294 52.8882 65.2716 52.9278L64.2716 54.6558C64.2553 54.671 64.2339 54.6794 64.2116 54.6794C64.1893 54.6794 64.1679 54.671 64.1516 54.6558L63.1196 52.9198C63.0713 52.8409 62.9946 52.7835 62.9052 52.7597C62.8158 52.7359 62.7207 52.7474 62.6396 52.7918L61.7356 53.3198C61.696 53.3422 61.6613 53.3722 61.6334 53.4081C61.6055 53.4441 61.585 53.4852 61.5731 53.5291C61.5612 53.573 61.5581 53.6188 61.564 53.6639C61.57 53.709 61.5848 53.7524 61.6076 53.7918L62.6076 55.5278C62.6161 55.5353 62.6229 55.5445 62.6276 55.5549C62.6323 55.5652 62.6347 55.5764 62.6347 55.5878C62.6347 55.5991 62.6323 55.6103 62.6276 55.6207C62.6229 55.631 62.6161 55.6403 62.6076 55.6478H60.5356C60.4422 55.6478 60.3527 55.6849 60.2867 55.7509C60.2207 55.8169 60.1836 55.9064 60.1836 55.9998V57.0398C60.1836 57.1331 60.2207 57.2227 60.2867 57.2887C60.3527 57.3547 60.4422 57.3918 60.5356 57.3918H62.5356C62.5589 57.3918 62.5813 57.401 62.5978 57.4175C62.6143 57.4341 62.6236 57.4564 62.6236 57.4798L61.5996 59.2638C61.5768 59.3031 61.562 59.3466 61.556 59.3917C61.5501 59.4368 61.5532 59.4826 61.5651 59.5265C61.577 59.5704 61.5975 59.6115 61.6254 59.6474C61.6533 59.6833 61.688 59.7134 61.7276 59.7358L62.6396 60.2638C62.6789 60.2866 62.7224 60.3014 62.7675 60.3073C62.8126 60.3132 62.8584 60.3102 62.9023 60.2983C62.9462 60.2864 62.9873 60.2659 63.0232 60.238C63.0591 60.2101 63.0892 60.1754 63.1116 60.1358L64.1196 58.3998C64.1359 58.3846 64.1573 58.3761 64.1796 58.3761C64.2019 58.3761 64.2233 58.3846 64.2396 58.3998L65.2396 60.1358C65.262 60.1754 65.292 60.2101 65.328 60.238C65.3639 60.2659 65.405 60.2864 65.4489 60.2983C65.4928 60.3102 65.5386 60.3132 65.5837 60.3073C65.6288 60.3014 65.6723 60.2866 65.7116 60.2638L66.6236 59.7358C66.6632 59.7134 66.6979 59.6833 66.7258 59.6474C66.7537 59.6115 66.7742 59.5704 66.7861 59.5265C66.798 59.4826 66.8011 59.4368 66.7951 59.3917C66.7892 59.3466 66.7744 59.3031 66.7516 59.2638L65.7516 57.5278C65.738 57.5108 65.7305 57.4896 65.7305 57.4678C65.7305 57.446 65.738 57.4248 65.7516 57.4078H67.7916C67.8849 57.4078 67.9745 57.3707 68.0405 57.3047C68.1065 57.2387 68.1436 57.1491 68.1436 57.0558L68.2076 55.9998Z', fill='white')
+                                    path(d='M82.4005 55.9997C82.4005 55.9063 82.3634 55.8168 82.2974 55.7508C82.2314 55.6848 82.1418 55.6477 82.0485 55.6477H80.0485C80.0373 55.6477 80.0262 55.6454 80.0159 55.6409C80.0056 55.6364 79.9964 55.6298 79.9889 55.6215C79.9813 55.6132 79.9756 55.6034 79.9721 55.5928C79.9686 55.5821 79.9674 55.5708 79.9685 55.5597L80.9685 53.8237C80.9913 53.7843 81.0061 53.7409 81.012 53.6958C81.0179 53.6507 81.0149 53.6049 81.003 53.561C80.9911 53.5171 80.9706 53.476 80.9427 53.44C80.9148 53.4041 80.8801 53.3741 80.8405 53.3517L79.9445 52.7997C79.8638 52.7532 79.768 52.7406 79.678 52.7646C79.5881 52.7885 79.5113 52.8472 79.4645 52.9277L78.4645 54.6557C78.4482 54.6709 78.4267 54.6793 78.4045 54.6793C78.3822 54.6793 78.3608 54.6709 78.3445 54.6557L77.3445 52.9197C77.2977 52.8413 77.2224 52.7842 77.1343 52.7603C77.0463 52.7364 76.9524 52.7477 76.8725 52.7917L75.9685 53.3197C75.9289 53.3421 75.8942 53.3721 75.8663 53.408C75.8384 53.444 75.8179 53.4851 75.806 53.529C75.7941 53.5729 75.791 53.6187 75.7969 53.6638C75.8028 53.7089 75.8177 53.7523 75.8405 53.7917L76.8005 55.5277C76.8157 55.544 76.8241 55.5654 76.8241 55.5877C76.8241 55.6099 76.8157 55.6314 76.8005 55.6477H74.7285C74.6394 55.6538 74.5559 55.6935 74.495 55.7589C74.434 55.8243 74.4003 55.9103 74.4005 55.9997V57.0397C74.3994 57.0855 74.4075 57.1311 74.4243 57.1738C74.4411 57.2164 74.4663 57.2553 74.4984 57.2881C74.5304 57.3209 74.5687 57.347 74.611 57.3647C74.6532 57.3825 74.6986 57.3917 74.7445 57.3917H76.7445C76.7678 57.3917 76.7902 57.4009 76.8067 57.4174C76.8232 57.4339 76.8325 57.4563 76.8325 57.4797L75.8325 59.2157C75.8097 59.255 75.7949 59.2985 75.7889 59.3436C75.783 59.3887 75.7861 59.4345 75.798 59.4784C75.8099 59.5223 75.8304 59.5634 75.8583 59.5993C75.8862 59.6352 75.9209 59.6653 75.9605 59.6877L76.8645 60.2157C76.9452 60.2622 77.041 60.2748 77.1309 60.2508C77.2209 60.2268 77.2977 60.1682 77.3445 60.0877L78.3205 58.3997C78.3326 58.3927 78.3464 58.389 78.3605 58.389C78.3745 58.389 78.3883 58.3927 78.4005 58.3997L79.4005 60.1357C79.4473 60.2161 79.5241 60.2748 79.614 60.2988C79.704 60.3228 79.7998 60.3102 79.8805 60.2637L80.7845 59.7357C80.8241 59.7133 80.8588 59.6832 80.8867 59.6473C80.9146 59.6114 80.9351 59.5703 80.947 59.5264C80.9589 59.4825 80.9619 59.4367 80.956 59.3916C80.9501 59.3465 80.9353 59.303 80.9125 59.2637L80.0005 57.5277C79.9868 57.5106 79.9794 57.4895 79.9794 57.4677C79.9794 57.4459 79.9868 57.4247 80.0005 57.4077H82.0405C82.1338 57.4077 82.2234 57.3706 82.2894 57.3046C82.3554 57.2386 82.3925 57.149 82.3925 57.0557L82.4005 55.9997Z', fill='white')
+                                    path(fill-rule='evenodd', clip-rule='evenodd', d='M4.49987 20.8525C4.47181 23.3065 2.47945 25.2886 0.0214844 25.3C2.48669 25.3116 4.48344 27.3055 4.49967 29.7697C4.51588 27.3084 6.5081 25.3162 8.96942 25.3C6.51548 25.2839 4.52784 23.3036 4.49987 20.8525Z', fill='#81BE33')
+                                    path(fill-rule='evenodd', clip-rule='evenodd', d='M58.4336 4.29936C60.3656 4.31749 61.9262 5.87747 61.9262 7.7992L61.9262 7.7998H61.9267L61.9267 7.79931C61.9267 5.86632 63.5056 4.29932 65.4533 4.29932H65.4539V4.29931H65.4533C63.5057 4.29931 61.9269 2.73257 61.9267 0.799805C61.9266 0.799805 61.9265 0.799805 61.9264 0.799805C61.9262 2.72147 60.3656 4.28135 58.4336 4.29936Z', fill='#81BE33')
+                                    path(fill-rule='evenodd', clip-rule='evenodd', d='M96.5997 25.4258C96.5861 27.071 95.2482 28.4004 93.5998 28.4004C93.5997 28.4004 93.5997 28.4004 93.5996 28.4004V28.4007L93.6 28.4007C95.245 28.4007 96.5807 29.7246 96.5998 31.365C96.619 29.7246 97.9547 28.4007 99.5996 28.4007V28.4006C97.9512 28.4006 96.6132 27.0711 96.5997 25.4258Z', fill='#81BE33')
+                            .textNote__text
+                                p.text16.colorGreen.medium.mb5 We have a responsibility to protect your information
+                                p.text14.colorBlack55 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        .flightPassenger__btn
+                            a.btn.btn-orange-1(href='flightReview.html') CONTINUE
+        #tipsModal.modal.fade
+            .modal-dialog.modal-tips
+                .modal-content
+                    .modal-body
+                        button.close(type='button', data-dismiss='modal')
+                            svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                        .modal-tips__cont
+                            .modal-tips__text.mb15
+                                svg.svg1point5(width='88', height='88', viewBox='0 0 88 88', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    circle(cx='44', cy='44', r='44', fill='#0E61D7')
+                                    path(d='M66.087 50.1371C65.5159 46.5749 62.4418 43.9546 58.8339 43.9546C55.2258 43.9546 52.152 46.5749 51.5807 50.1371L49.6918 61.9101C49.6042 62.4563 49.7605 63.014 50.1194 63.4357C50.4785 63.856 51.0039 64.0991 51.5579 64.0991H66.1097C66.6636 64.0991 67.1892 63.856 67.5481 63.4357C67.907 63.0142 68.0632 62.4565 67.9758 61.9101L66.087 50.1371Z', fill='white')
+                                    path(d='M54.6933 39.9964C58.8764 39.9964 62.2674 36.6054 62.2674 32.4223C62.2674 28.2392 58.8764 24.8481 54.6933 24.8481C50.5102 24.8481 47.1191 28.2392 47.1191 32.4223C47.1191 36.6054 50.5102 39.9964 54.6933 39.9964Z', fill='white')
+                                    path(d='M30.7668 49.7735C31.248 51.08 32.4837 51.8886 33.7988 51.8886C34.1703 51.8886 34.5473 51.8238 34.9161 51.6883C36.591 51.0714 37.4485 49.2133 36.8309 47.539L28.8251 25.8127C28.2081 24.137 26.3492 23.2839 24.6759 23.8977C23.0008 24.5147 22.1433 26.3728 22.7611 28.047L30.7668 49.7735Z', fill='white')
+                                    path(d='M34.7444 59.4537H26.681C25.6704 59.4537 24.8474 58.6307 24.8474 57.62V39.8616C24.8474 38.5228 23.7624 37.438 22.4236 37.438C21.0848 37.4378 20 38.5227 20 39.8616V57.6198C20 61.3036 22.9972 64.3009 26.681 64.3009H34.7445C36.0834 64.3009 37.1683 63.2159 37.1683 61.8772C37.1681 60.5384 36.0832 59.4537 34.7444 59.4537Z', fill='white')
+                                    path(d='M42.9288 60.4844C41.1914 60.4844 39.727 61.5999 39.1843 63.1519C39.1084 63.3696 39.1423 63.6102 39.2756 63.799C39.409 63.9867 39.6259 64.0987 39.8563 64.0987H46.0009C46.2313 64.0987 46.4475 63.9867 46.5815 63.799C46.7148 63.6103 46.7488 63.3698 46.673 63.1519C46.1305 61.5999 44.6661 60.4844 42.9288 60.4844Z', fill='white')
+                                h3.color1.mb15.mt15 Tips on entering your name
+                                p.text14.colorBlack85 Enter your full name just as it appears on your passport. Use only alphabetical characters (A to Z), with a maximum of 25 characters for your first/given name, and 30 characters for your last/family name
+
+                            .tipsBox
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span No first name
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If you don't have a first name, check the box stating "This passenger does not have a first/given name".
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Phuong
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given' disabled='disabled')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span No last name
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If you don’t have a last name, check the box stating “This passenger does not have a first/given name”. Then enter your first name in the last/family name field.
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Phuong
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given' disabled='disabled')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Last name contains a single letter
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your last name is made up of only one letter, double the letter in the last/given name field.
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Name contains special charaters
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Name contains a suffix
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span First name is too long
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Last name is too long
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.subMenu__child').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart date',
+                titleCheckOut: 'Return date',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '<i class="fas fa-calendar-alt"></i>',
+                iconArrowTop: false
+            });
+        script.
+            $(".passengerDetail__tab button").click(function () {
+                var tab_id = $(this).parents('.passengerDetail__tab li').attr('data-tab');
+
+                $('.passengerDetail__tab li').removeClass('active');
+                $(this).parents('.passengerDetail__tab li').addClass('active');
+                $('.passengerDetail__box').removeClass('open');
+                $("#" + tab_id).addClass('open');
+            });
+        script.
+            $('.formBox__frequent > button').click(function () {
+                $(this).next('.frequentBox').slideToggle(300);
+                $(this).toggleClass('rotate');
+            });
+        script.
+            $(".tipsBox__btn").on("click", function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(this)
+                        .siblings(".tipsBox__body")
+                        .slideUp(200);
+                    $(".tipsBox__btn i")
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
+                } else {
+                    $(".tipsBox__btn i")
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
+                    $(this)
+                        .find("i")
+                        .removeClass("fa-chevron-down")
+                        .addClass("fa-chevron-up");
+                    $(".tipsBox__btn").removeClass("active");
+                    $(this).addClass("active");
+                    $(".tipsBox__body").slideUp(200);
+                    $(this)
+                        .siblings(".tipsBox__body")
+                        .slideDown(200);
+                }
+            });
+
+
+
+
+
+
