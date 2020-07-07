@@ -138,10 +138,19 @@
     @include breakpoint(xs){
       margin-bottom: 15px;
     }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.active{
+      .btn{
+        background-color: $color-1;
+        color: #fff;
+      }
+    }
     .btn{
       width: 100%;
-      border-color: $orange-1;
-      color: $orange-1;
+      border-color: $color-1;
+      color: $color-1;
     }
   }
 }

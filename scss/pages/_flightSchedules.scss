@@ -1,4 +1,25 @@
 .flightSchedules{
+  &__search{
+    background-color: #fff;
+    padding: 30px 0;
+    @include breakpoint(sm){
+      padding: 2vw 0;
+    }
+    .searchBox{
+      margin-bottom: 30px;
+      @include breakpoint(sm){
+        margin-bottom: 2vw;
+      }
+      &__item{
+        background-color: #fff;
+        box-shadow: $shadow;
+        @include breakpoint(xs){
+          position: initial;
+          padding: 15px 8px 30px;
+        }
+      }
+    }
+  }
   &__body{
     padding: 30px 0;
     @include breakpoint(sm){
@@ -16,28 +37,160 @@
     }
   }
 }
-.schedulesSelect{
-  color: $purple;
-  font-size: 14px;
-  width: 100%;
-  @include breakpoint(sm){
-    font-size: 1vw;
-  }
-  p{
-    margin-top: 5px;
-    @include breakpoint(sm){
-      margin-top: .5vw;
+.schedules{
+  &__header{
+    background-color: $color-1;
+    display: flex;
+    margin-bottom: .5vw;
+    box-shadow: $shadow;
+    border-radius: 4px 4px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    .schedules__left{
+      border-right: 1px solid #fff;
     }
+  }
+  &__left{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    padding: 0 .5vw;
+  }
+  &__right{
+    width: 45%;
+    display: flex;
+  }
+  &__cont{
+    display: flex;
+    width: 75%;
+    > p {
+      flex: 1;
+      padding: 0 .8vw;
+    }
+    .flInfo{
+      &__trip{
+        flex: 1;
+        margin: 0;
+        padding: 1vw 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+      }
+      &__item{
+
+      }
+    }
+  }
+  &__stop{
+    width: 25%;
+    text-align: center;
+  }
+  &__date{
+    display: flex;
+    flex: 1;
+    .dateItem{
+      width: calc(100% / 7);
+      padding: 1vw .5vw;
+    }
+  }
+  &__item{
+    box-shadow: $shadow;
+    background-color: #fff;
+    margin-bottom: .5vw;
+  }
+  &__row{
+    display: flex;
+    .schedules__left{
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  }
+  &__plane{
+    display: flex;
+    flex: 1;
+    .planeItem{
+      width: calc(100% / 7);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      transition: all .2s;
+      &:hover{
+        background-color: $color-1;
+        svg{
+          path{
+            fill: #fff;
+            fill-opacity: 1;
+          }
+        }
+      }
+      &:last-child{
+        border-right: none;
+      }
+      &.active{
+        background-color: $color-1;
+        svg{
+          path{
+            fill: #fff;
+            fill-opacity: 1;
+          }
+        }
+      }
+      svg{
+        path{
+          transition: all .2s;
+        }
+      }
+    }
+  }
+  &__code{
+    background-color: rgba(14, 97, 215, 0.08);
+    padding: 1vw;
   }
 }
-.modal-schedules{
-  &__cont{
-    padding: 30px 0;
-    @include breakpoint(sm){
-      padding: 2vw 0;
+
+.schedulesMobile{
+  &__header{
+    background-color: $color-1;
+    box-shadow: $shadow;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 4px 4px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    > p {
+      flex: 1;
+      padding: 0 10px;
     }
-    h2{
-      text-align: center;
+  }
+  &__body{}
+  &__item{
+    background-color: #fff;
+    box-shadow: $shadow;
+    margin-bottom: 5px;
+    .flInfo{
+      &__trip{
+        align-items: center;
+      }
+      &__item{
+        &:nth-child(1),
+        &:nth-child(3){
+          flex: 1 1 35%;
+        }
+        &:nth-child(2){
+          flex: 1 1 30%;
+        }
+      }
     }
+  }
+  &__row{
+    padding: 15px 10px 22px;
+  }
+  &__code{
+    background-color: rgba(14, 97, 215, 0.08);
+    padding: 10px;
   }
 }
