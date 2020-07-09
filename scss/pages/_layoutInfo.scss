@@ -195,73 +195,50 @@
   }
 }
 
-.faq {
-  &__item {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+.faq{
+  &__item{
+    background: #fff;
+    box-shadow: $shadow;
     border-radius: 4px;
     margin-bottom: 15px;
-    @include breakpoint(sm) {
-      margin-bottom: 1vw;
-    }
-  }
-
-  &__btn {
-    font-size: 16px;
-    font-weight: 500;
-    color: $black85;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    width: 100%;
-    transition: all .2s;
-    text-align: left;
-    @include breakpoint(sm) {
-      font-size: 1vw;
-      padding: .5vw 1vw;
-      align-items: center;
-    }
-
-    &:hover {
-      color: $orange;
-    }
-
-    &.active {
-      color: $orange;
-    }
-
-    span {
-      margin-right: 15px;
-      @include breakpoint(sm) {
-        margin-right: 1vw;
-      }
-    }
-  }
-
-  &__body {
     padding: 0 15px;
-    display: none;
-    @include breakpoint(sm) {
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
       padding: 0 1vw;
     }
   }
-
-  &__cont {
+  &__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: $color-1;
+    width: 100%;
+    font-weight: 500;
     padding: 15px 0;
-    border-top: 1px dashed rgba(0, 0, 0, 0.35);
-    @include breakpoint(sm) {
+    text-align: left;
+    @include breakpoint(sm){
+      font-size: 1.1vw;
       padding: 1vw 0;
-      border-top: 1px dashed rgba(0, 0, 0, 0.35);
     }
-
-    p {
-      font-size: 14px;
-      color: $black55;
-      @include breakpoint(sm) {
-        font-size: 1vw;
+    i{
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__body{
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    display: none;
+    @include breakpoint(sm){
+      padding: 1vw 0;
+    }
+    .form-group{
+      > label{
+        font-weight: 400;
       }
     }
   }
+  &__cont{}
 }
 
 .policy {

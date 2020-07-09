@@ -62,12 +62,6 @@
   .container {
     position: relative;
   }
-
-  .flightCheap & {
-    @include breakpoint(sm) {
-      margin-bottom: 1vw;
-    }
-  }
 }
 
 .offersBox {

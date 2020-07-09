@@ -30,11 +30,11 @@
   }
   &.table-flight{
     th{
-      background-color: $purple;
+      background-color: $color-1;
       color: #fff;
       vertical-align: middle;
       white-space: nowrap;
-      border-bottom: .5vw solid #e5e5e5;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       border-top: none;
       position: sticky;
       top: 0;
@@ -52,27 +52,23 @@
     td{
       background-color: #fff;
       vertical-align: middle;
-      border-bottom: 1vw solid #e5e5e5;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       border-top: none;
       &.active{
         background-color: rgba(242, 216, 248, 0.6);
       }
     }
-    .cheapSchedules & {
-      td{
-        &:last-child{
-          border-left: 1px dashed rgba(0, 0, 0, 0.15);
-        }
-      }
-    }
   }
   &.table-flight-mobile{
     th{
-      background-color: $purple;
+      background-color: $color-1;
       color: #fff;
       vertical-align: middle;
       border-bottom: none;
       border-top: none;
+      position: sticky;
+      top: 0;
+      z-index: 99;
       &:last-child{
         text-align: right;
       }
@@ -89,15 +85,8 @@
     td{
       background-color: #fff;
       vertical-align: middle;
-      border-bottom: 15px solid #e5e5e5;
+      border-bottom: none;
       border-top: none;
-    }
-    .cheapSchedules & {
-      td{
-        background: transparent;
-        padding: 0;
-        border-bottom: none;
-      }
     }
   }
   &.table-purple{
