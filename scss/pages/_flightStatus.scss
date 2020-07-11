@@ -1,4 +1,33 @@
 .flightStatus{
+  &__search{
+    background-color: #fff;
+    padding: 30px 0;
+    @include breakpoint(sm){
+      padding: 2vw 0;
+    }
+    .searchBox{
+      margin-bottom: 30px;
+      @include breakpoint(sm){
+        margin-bottom: 2vw;
+      }
+      &__item{
+        background-color: #fff;
+        box-shadow: $shadow;
+        @include breakpoint(xs){
+          position: initial;
+          padding: 15px 8px 30px;
+          overflow: initial;
+        }
+      }
+      &__radio{
+        .radio{
+          label{
+            color: $black85;
+          }
+        }
+      }
+    }
+  }
   &__body{
     padding: 30px 0;
     @include breakpoint(sm){
@@ -9,126 +38,135 @@
     @include breakpoint(xs){
       display: none;
     }
-    .table-flight{
-      th,td{
-        vertical-align: top;
-        &:nth-child(1){
-          width: 30%;
-        }
-        &:nth-child(2){
-          width: 50%;
-        }
-        &:nth-child(3){
-          width: 20%;
-        }
-      }
-    }
   }
   &__mobile{
     @include breakpoint(sm){
       display: none;
     }
   }
+}
+.statusTable{
   &__header{
-    background-color:rgba(102, 47, 142, 0.8);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    text-align: center;
-    background-blend-mode: multiply;
-    padding: 65px 0;
-    @include breakpoint(sm){
-      padding: 5vw 0;
-    }
-    h2{
-      color: #fff;
-    }
-  }
-  .statusShow{
-    display: none;
-  }
-}
-.modal-status{
-  &__cont{
-    padding: 30px 0;
-    @include breakpoint(sm){
-      padding: 2vw 0;
-    }
-    h2{
-      text-align: center;
-    }
-  }
-  .searchBox__form{
-    @include breakpoint(sm){
-      justify-content: flex-end;
-    }
-  }
-}
-.flNumber{
-  @include breakpoint(sm){
+    background-color: $color-1;
     display: flex;
-    margin: 0 -1vw 4vw;
-  }
-  &__col{
-    @include breakpoint(sm){
-      width: 50%;
-      padding: 0 1vw;
-    }
-  }
-  &__item{
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    height: 3.5vw;
+    margin-bottom: .5vw;
+    box-shadow: $shadow;
     border-radius: 4px 4px 0 0;
-    overflow: hidden;
-    @include breakpoint(xs){
-      margin-bottom: 30px;
-    }
-    @include breakpoint(sm){
-      height: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    p{
+      flex: 1;
     }
   }
-  &__header{
+  &__body{}
+  &__item{
+    box-shadow: $shadow;
+    background-color: #fff;
+    margin-bottom: .5vw;
+  }
+  &__row{
     display: flex;
-  }
-  &__name{
-    background-color: $purple;
-    color: #fff;
-    width: 60%;
-    padding: 15px;
-    @include breakpoint(sm){
-      padding: 1vw;
+    .statusTable__number{
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
     }
   }
-  &__status{
+  &__code{
+    background-color: rgba(14, 97, 215, 0.08);
+    padding: 1vw;
+  }
+  &__number{
+    width: 15%;
+    padding: 0 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__trip{
     width: 40%;
-    background-color: #81BE33;
-    color: #fff;
+    display: flex;
+    padding: 0 1vw;
+    .flInfo{
+      &__trip{
+        width: 100%;
+        padding: 1vw 0;
+      }
+    }
+  }
+  &__stop{
+    width: 15%;
+    padding: 0 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    @include breakpoint(sm){
-      padding: 1vw;
-    }
-    &.arrived{
-      background-color: #828282;
+    flex-wrap: wrap;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    p{
+      width: 100%;
     }
   }
-  &__body{
-    padding: 15px;
-    @include breakpoint(sm){
-      padding: 0 1vw;
+  &__time{
+    width: 30%;
+    padding: 0 1vw;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.statusTableMobile{
+  &__header{
+    background-color: $color-1;
+    box-shadow: $shadow;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 4px 4px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    > p {
+      flex: 1;
+      padding: 0 10px;
     }
-    .d-row{
-      padding: 15px 0;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
-      display: flex;
-      &:last-child{
-        border-bottom: none;
+  }
+  &__body{}
+  &__item{
+    background-color: #fff;
+    box-shadow: $shadow;
+    margin-bottom: 5px;
+    .flInfo{
+      &__trip{
+        align-items: center;
+      }
+      &__item{
+        &:nth-child(1),
+        &:nth-child(3){
+          flex: 1 1 35%;
+        }
+        &:nth-child(2){
+          flex: 1 1 30%;
+        }
       }
     }
-    .d-block{
-      width: 50%;
+  }
+  &__row{
+    padding: 15px 10px 22px;
+    p.d-flex{
+      margin: 0 -10px;
+      span{
+        flex: 1;
+        padding: 0 10px;
+        white-space: nowrap;
+      }
     }
+  }
+  &__code{
+    background-color: rgba(14, 97, 215, 0.08);
+    padding: 10px;
   }
 }

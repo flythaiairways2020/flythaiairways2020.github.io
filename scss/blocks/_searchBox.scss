@@ -342,6 +342,29 @@
     @include breakpoint(sm){
       margin-bottom: 1vw;
     }
+    &.radioTransparent{
+      .radio{
+        label{
+          @include breakpoint(sm){
+            color: #fff;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .radio input[type=radio]+label:before{
+        @include breakpoint(sm){
+          background-color: transparent;
+          border-color: #fff;
+        }
+      }
+      .radio input[type=radio]:checked+label:before{
+        @include breakpoint(sm){
+          background-color: $orange-1!important;
+        }
+      }
+    }
     .radio{
       +.radio{
         @include breakpoint(xs){
@@ -351,21 +374,6 @@
           margin-left: 3vw;
         }
       }
-      label{
-        @include breakpoint(sm){
-          color: #fff;
-          &:hover{
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-    .radio input[type=radio]+label:before{
-      background-color: transparent;
-      border-color: #fff;
-    }
-    .radio input[type=radio]:checked+label:before{
-      background-color: $orange-1!important;
     }
   }
   &__form{
