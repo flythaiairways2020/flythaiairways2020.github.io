@@ -295,6 +295,22 @@
   }
 }
 
+.bookingStatus{
+  @include breakpoint(sm){
+    padding: 0 10vw;
+  }
+}
+.refundRequest{
+  @include breakpoint(sm){
+    padding: 0 10vw;
+  }
+}
+.bookingChange{
+  @include breakpoint(sm){
+    padding: 0 10vw;
+  }
+}
+
 .fareRules {
   &__cont {
     > p {
@@ -322,17 +338,29 @@
     }
   }
 
-  .table-purple {
-    td {
-      &:last-child {
-        @include breakpoint(xs) {
-          min-width: 300px;
-        }
+  .table-blue {
+    background-color: #fff;
+    .w20{
+      @include breakpoint(xs){
+        min-width: 150px;
+      }
+      @include breakpoint(sm){
+        width: 20%;
       }
     }
+    .w80{
 
-    th, td {
-      text-align: center;
+      @include breakpoint(sm){
+        width: 80%;
+      }
+    }
+    .w16{
+      @include breakpoint(xs){
+        min-width: 175px;
+      }
+      @include breakpoint(sm){
+        width: 16%;
+      }
     }
   }
 }
