@@ -1,0 +1,152 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .container
+                    h2.color1.mb30 FAQ
+                    ul.layoutInfo__navbar
+                        li
+                            a(href='aboutUs.html')
+                                span About us
+                        li
+                            a(href='contactUs.html')
+                                span Contact us
+                        li.active
+                            a(href='faq.html')
+                                span FAQ
+                        li
+                            a(href='policy.html')
+                                span Privacy Policy
+                        li
+                            a(href='termsOfUse.html')
+                                span Terms of Use
+                    .layoutInfo__body
+                        .layoutInfo__banner(style='background-image: url("../images/faq-banner.jpg");')
+                            .container
+                                h1
+                                    | FAQ
+                                    br
+                                    | ?
+                        .faq
+                            .faq__item
+                                button.faq__btn
+                                    span 1. What should I do if I miss my connecting flight because of flight delays and cancellations?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 2. How can I know if my flight is delayed or cancelled?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 3. Can I purchase multiple trips through your website? Will my baggage be checked through to the final destination?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 4. How many passengers can I book online through your website?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 5. I want to travel today; can I purchase a ticket online?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 6. How long after the payment made I will receive an e-ticket?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 7. What should I do if my payment keeps failing?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 8. I want to change my flight, how can I do it?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 9. Is my credit card information safe and secure?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.subMenu__child').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+        script.
+            $(".faq__btn").on("click", function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(this)
+                        .siblings(".faq__body")
+                        .slideUp(200);
+                    $(".faq__btn i")
+                        .removeClass("fa-minus")
+                        .addClass("fa-plus");
+                } else {
+                    $(".faq__btn i")
+                        .removeClass("fa-minus")
+                        .addClass("fa-plus");
+                    $(this)
+                        .find("i")
+                        .removeClass("fa-plus")
+                        .addClass("fa-minus");
+                    $(".faq__btn").removeClass("active");
+                    $(this).addClass("active");
+                    $(".faq__body").slideUp(200);
+                    $(this)
+                        .siblings(".faq__body")
+                        .slideDown(200);
+                }
+            });
+
+
+
+
+

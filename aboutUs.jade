@@ -1,0 +1,69 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .container
+                    h2.color1.mb30 About us
+                    ul.layoutInfo__navbar
+                        li.active
+                            a(href='aboutUs.html')
+                                span About us
+                        li
+                            a(href='contactUs.html')
+                                span Contact us
+                        li
+                            a(href='faq.html')
+                                span FAQ
+                        li
+                            a(href='policy.html')
+                                span Privacy Policy
+                        li
+                            a(href='termsOfUse.html')
+                                span Terms of Use
+                    .layoutInfo__body
+                        .aboutUs
+                            .aboutUs__cont
+                                .aboutUs__img
+                                    .dImg
+                                        img(src='images/aboutUs-img1.jpg')
+                                    .dImg
+                                        img(src='images/aboutUs-img2.jpg')
+                                    .dImg
+                                        img(src='images/aboutUs-img3.jpg')
+                                p.text14.mb15 Bring more travelers from all over the world to get closer to the ASEAN is our biggest dream and especially Cambodia country with different cultures waiting for your discovery, we have now created a website named as cambodiaangkora to support our beloved clients Camdobia Airlines' tickets from international to domestic flights, hotels, tours, transports and airport pick-up. This website is another son of AN group, a travel company was founded since 2019.
+                                p.text14.mb15 We commit to provide our beloved clients all tourism services at the best fares, flexible time and unlimited supports. Our website is highly secured and protected 24/7 to ensure your safety is our first mission and your smile is our happinesss.
+                                p.text14.mb15 Please contact us by email at booking@cambodiaangkorailines.com for any concern in regards to airlines tickets within Philippines and from/to Philippines, Hotels, Car Rental...
+                                p.text14.mb15 Thank you for always being there with us.
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.subMenu__child').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+
+
