@@ -325,7 +325,7 @@
   }
 
   &__table {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadow;
     border-radius: 4px;
     margin-bottom: 15px;
     @include breakpoint(xs) {
@@ -335,31 +335,21 @@
     }
     @include breakpoint(sm) {
       margin-bottom: 2vw;
+      overflow: hidden;
     }
   }
 
   .table-blue {
     background-color: #fff;
+    margin-bottom: 0;
     .w20{
       @include breakpoint(xs){
         min-width: 150px;
-      }
-      @include breakpoint(sm){
-        width: 20%;
-      }
-    }
-    .w80{
-
-      @include breakpoint(sm){
-        width: 80%;
       }
     }
     .w16{
       @include breakpoint(xs){
         min-width: 175px;
-      }
-      @include breakpoint(sm){
-        width: 16%;
       }
     }
   }
@@ -406,6 +396,73 @@
         &:hover {
           text-decoration: underline;
         }
+      }
+    }
+  }
+}
+.newUpdate{
+  @include breakpoint(sm){
+    padding: 0 10vw;
+  }
+  &__item{
+    background: #fff;
+    box-shadow: $shadow;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
+      padding: 0 1vw;
+    }
+  }
+  &__btn{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: $color-1;
+    width: 100%;
+    font-weight: 500;
+    padding: 15px 0;
+    @include breakpoint(sm){
+      font-size: 1.1vw;
+      padding: 1vw 0;
+    }
+    i{
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__body{
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    display: none;
+    @include breakpoint(sm){
+      padding: 1vw 0;
+    }
+    .form-group{
+      > label{
+        font-weight: 400;
+      }
+    }
+  }
+  &__cont{}
+}
+.baggageInfo{
+  &__table{
+    margin-bottom: 30px;
+    box-shadow: $shadow;
+    border-radius: 4px;
+    @include breakpoint(sm){
+      margin-bottom: 2vw;
+      overflow: hidden;
+    }
+    .table{
+      margin-bottom: 0;
+    }
+    .w17{
+      @include breakpoint(sm){
+        width: calc(100% / 7);
       }
     }
   }

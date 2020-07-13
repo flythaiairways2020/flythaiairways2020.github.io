@@ -1,0 +1,304 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .container
+                    h2.color1.mb30 Travel information
+                    ul.layoutInfo__navbar
+                        li
+                            a(href='newAndUpdate.html')
+                                span News & updates
+                        li.active
+                            a(href='baggageInfo.html')
+                                span Baggage information
+                        li
+                            a(href='flightRoutes.html')
+                                span Flight routes
+                        li
+                            a(href='fleet.html')
+                                span Fleet Revitalization
+                        li
+                            a(href='favDes.html')
+                                span Favourite Destinations
+                    .layoutInfo__body
+                        .layoutInfo__banner(style='background-image: url("../images/baggageInfo-banner.jpg");')
+                            .container
+                                h1
+                                    | Baggage information
+                        .baggageInfo
+                            h3.mb15.color1 Baggage policy
+                            p.text14.colorBlack85.medium.mb15 Baggage information is always the biggest concern for all passengers. Please see the relevant baggage information below to book a ticket class that best suits you:
+                            h4.mb15.color1 Checked baggage
+                            p.text14.colorBlack85.medium.mb15 1. Checked baggage policy applied to domestic flights:
+                            .baggageInfo__table
+                                table.table.table-blue
+                                    thead
+                                        tr
+                                            th.bgBlue1.text-center.w16
+                                                p.text16.colorWhite.medium PASSENGER
+                                            th.bgBlue2.text-center.w16
+                                                p.text16.colorWhite Eco Promotion
+                                            th.bgBlue3.text-center.w16
+                                                p.text16.colorWhite Economy Saver
+                                            th.bgBlue4.text-center.w16
+                                                p.text16.colorWhite Economy
+                                            th.bgBlue5.text-center.w16
+                                                p.text16.colorWhite Premium Economy
+                                            th.bgBlue6.text-center.w16
+                                                p.text16.colorWhite Business
+
+                                    tbody
+                                        tr
+                                            td.w16
+                                                p.text14.colorBlack85.medium Adult/child
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 40 kgs
+                                        tr
+                                            td.w16
+                                                p.text14.colorBlack85.medium Infant without seat
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                            p.text14.colorBlack85.medium.mb15 2. Checked baggage policy applied to flighs: Asia, Australia, New Zealand/ Europe, Africa, Middle East/ Asia, Australia, New Zealand/ South Asia:
+                            .baggageInfo__table
+                                table.table.table-blue
+                                    thead
+                                        tr
+                                            th.bgBlue1.text-center.w16
+                                                p.text16.colorWhite.medium PASSENGER
+                                            th.bgBlue2.text-center.w16
+                                                p.text16.colorWhite Eco Promotion
+                                            th.bgBlue3.text-center.w16
+                                                p.text16.colorWhite Economy Saver
+                                            th.bgBlue4.text-center.w16
+                                                p.text16.colorWhite Economy
+                                            th.bgBlue5.text-center.w16
+                                                p.text16.colorWhite Premium Economy
+                                            th.bgBlue6.text-center.w16
+                                                p.text16.colorWhite Business
+
+                                    tbody
+                                        tr
+                                            td.w16
+                                                p.text14.colorBlack85.medium Adult/child
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 40 kgs
+                                        tr
+                                            td.w16
+                                                p.text14.colorBlack85.medium Infant without seat
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                            p.text14.colorBlack85.medium.mb15 3. Checked baggage policy applied to flighs to/from USA/Canada:
+                            .baggageInfo__table
+                                table.table.table-blue
+                                    thead
+                                        tr
+                                            th.bgBlue1.text-center.w16
+                                                p.text16.colorWhite.medium PASSENGER
+                                            th.bgBlue2.text-center.w16
+                                                p.text16.colorWhite Eco Promotion
+                                            th.bgBlue3.text-center.w16
+                                                p.text16.colorWhite Economy Saver
+                                            th.bgBlue4.text-center.w16
+                                                p.text16.colorWhite Economy
+                                            th.bgBlue5.text-center.w16
+                                                p.text16.colorWhite Premium Economy
+                                            th.bgBlue6.text-center.w16
+                                                p.text16.colorWhite Business
+
+                                    tbody
+                                        tr
+                                            td.w16
+                                                p.text14.colorBlack85.medium Adult/child
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 30 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 40 kgs
+                                        tr
+                                            td.w16
+                                                p.text14.colorBlack85.medium Infant without seat
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                                            td.w16
+                                                p.text14.colorBlack85.text-center 10 kgs
+                            p.text14.colorBlack85.medium.mb15 Important note:
+                            p.text14.colorBlack85.mb15 • In some cases, the baggage rules that apply for your journey may be different from above information. If you are our customer, please contact us for futher advice.
+                            p.text14.colorBlack85.mb15 • Prepaid baggage fee is non-re-routable/non-transferable and non-refundable in any case even your actual baggage’s weight is less than the prepaid baggage paid.
+                            p.text14.colorBlack85.mb15 • Prepaid baggage fee is non-refundable after confirmation email is sent out to your registered email address. However, in cases of flight delayed/cancellation or irregular operation and the passenger decides not to continue his flight, prepaid baggage fee will be refunded fully to the card used. Your prepaid baggage will be moved to new flight if your original flight is delayed/cancelled.
+                            p.text14.colorBlack85.mb15 • For passengers who wish to change to another flight due to the delay/cancellation, previously issued prepaid baggage may be carried over to the new flight. Change should be done at least 48 hours prior to your departure time.
+                            p.text14.colorBlack85.mb15 For more information about your checked baggage, kindly email us via 24/7 supporting email: reservations@flythaiairways.com or it can be seen in your booking details.
+                            h4.mb15.color1 Hand bagage
+                            p.text14.colorBlack85.medium.mb15 In addition to checked baggage, each passenger is allowed to carry up to 7 kg of hand baggage with a maximum length 56 cm x width 45 cm x depth 25 cm. Passengers are allowed to bring the following items for free:
+                            p.text14.colorBlack85.mb15 Handbag/wallet/purse with the maximum length 37.5 cm x width 25 cm x depth 12.5 cm, or the total of three dimensions do not exceed 75 cm with the total weight not exceeding 1.5 kgs.
+                            p.text14.colorBlack85.mb15 Notebooks, or personal computers
+                            p.text14.colorBlack85.mb15 • Walking sticks (crutches)
+                            p.text14.colorBlack85.mb15 • Infant food
+                            p.text14.colorBlack85.mb15 • Not allowed to use the equipment/devices/travel gadgets such as personal air purifier/ionizers, seat-recline preventer, knee defender, inflight beds owned by passengers on board
+                            p.text14.colorBlack85.mb15 • All liquids, aerosols, and gels in carry-on baggage must be carried in containers with a capacity not greater than 100ml.
+                            h4.mb15.color1 Excess baggage rate charge
+                            p.text14.colorBlack85.mb15 For baggage that exceeds the free baggage allowance, the passenger will be charged for the Excess Baggage Rate Charge. Excess Baggage Rate Charge is calculated as follows:
+                            p.text14.colorBlack85.medium.mb15 1. Excess Baggage Charge rate for Domestic sectors:
+                            .baggageInfo__table
+                                table.table.table-blue
+                                    thead
+                                        tr
+                                            th
+                                                p.text16.colorWhite Sectors
+                                            th
+                                                p.text16.colorWhite.text-center Rate (THB Per Kilogram)
+                                    tbody
+                                        tr
+                                            td
+                                                p.text14.colorBlack85 Chiang Mai - Bangkok
+                                            td
+                                                p.text14.colorBlack85.text-center 60
+                                        tr
+                                            td
+                                                p.text14.colorBlack85 Chiang Rai - Bangkok
+                                            td
+                                                p.text14.colorBlack85.text-center 60
+                                        tr
+                                            td
+                                                p.text14.colorBlack85 Hat Yai - Bangkok
+                                            td
+                                                p.text14.colorBlack85.text-center 60
+                            p.text14.colorBlack85.medium.mb15 2. Excess Baggage Charge rate for international sectors:
+                            p.text14.colorBlack85.mb15 Excess charge rate varies upon each zone as per the table below:
+                            .baggageInfo__table
+                                table.table.table-blue
+                                    thead
+                                        tr
+                                            th
+                                                p.text16.colorWhite.text-center Per 1 kg
+                                            th(colspan='6')
+                                                p.text16.colorWhite.text-center Destination
+                                    tbody
+                                        tr
+                                            td.w17
+                                                p.text14.colorBlack85 Origin
+                                            td.w17
+                                                p.text14.colorBlack85.text-center Zone 1
+
+
+                                            td.w17
+                                                p.text14.colorBlack85.text-center Zone 2
+
+
+                                            td.w17
+                                                p.text14.colorBlack85.text-center Zone 3
+
+
+                                            td.w17
+                                                p.text14.colorBlack85.text-center Zone 4
+
+
+                                            td.w17
+                                                p.text14.colorBlack85.text-center Zone 5
+
+
+                                            td.w17
+                                                p.text14.colorBlack85.text-center -
+
+
+                            p.text14.colorBlack85.mb15 Zoning Definitions:
+                            .baggageInfo__table
+                                table.table.table-blue
+                                    thead
+                                        tr
+                                            th.w20
+                                                p.text16.colorWhite.text-center Zone
+                                            th.w80
+                                                p.text16.colorWhite.text-center Origin/Destination
+                                    tbody
+                                        tr
+                                            td.w20
+                                                p.text14.colorBlack85.text-center 1
+                                            td.w80
+                                                p.text14.colorBlack85 Bangladesh, Cambodia, China(Kunming), Laos, Malaysia, Myanmar, Singapore, Thailand and TG Domestic Sectors in Thailand, Vietnam, Between Hong Kong and Taipei, Between Taipei and Seoul, Between Karachi and Muscat, Between Phuket and Singapore, Between Phuket and Kuala Lumpur
+
+
+
+                                        tr
+                                            td.w20
+                                                p.text14.colorBlack85.text-center 2
+                                            td.w80
+                                                p.text14.colorBlack85 Brunei Darussalam, China(Beijing, Shanghai, Chengdu, Guangzhou, Xiamen, Chongqing, Changsha), Hong Kong - China, India, Indonesia, Macau, Nepal, Philippines, Sri Lanka, Taiwan - China, Between Hong Kong and Seoul, Between Phuket and Hong Kong, Between Phuket and Beijing
+
+
+
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.subMenu__child').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+
+

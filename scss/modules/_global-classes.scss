@@ -259,20 +259,40 @@
   font-style: italic;
 }
 .bgBlue1{
-  background-color: #021B67;
+  background-color: #021B67!important;
 }
 .bgBlue2{
-  background-color: #0E61D7;
+  background-color: #0E61D7!important;
 }
 .bgBlue3{
-  background-color: #0A4BB8;
+  background-color: #0A4BB8!important;
 }
 .bgBlue4{
-  background-color: #07379A;
+  background-color: #07379A!important;
 }
 .bgBlue5{
-  background-color: #04267C;
+  background-color: #04267C!important;
 }
 .bgBlue6{
-  background-color: #021B67;
+  background-color: #021B67!important;
+}
+.w16{
+  @include breakpoint(sm){
+    width: 16%;
+  }
+}
+.w17{
+  @include breakpoint(sm){
+    width: 17%;
+  }
+}
+.w20{
+  @include breakpoint(sm){
+    width: 20%;
+  }
+}
+.w80{
+  @include breakpoint(sm){
+    width: 80%;
+  }
 }

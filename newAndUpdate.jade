@@ -1,0 +1,133 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .container
+                    h2.color1.mb30 Travel information
+                    ul.layoutInfo__navbar
+                        li.active
+                            a(href='newAndUpdate.html')
+                                span News & updates
+                        li
+                            a(href='baggageInfo.html')
+                                span Baggage information
+                        li
+                            a(href='flightRoutes.html')
+                                span Flight routes
+                        li
+                            a(href='fleet.html')
+                                span Fleet Revitalization
+                        li
+                            a(href='favDes.html')
+                                span Favourite Destinations
+                    .layoutInfo__body
+                        .layoutInfo__banner(style='background-image: url("../images/newsUpdates-banner.jpg");')
+                            .container
+                                h1
+                                    | News & updates
+                        .newUpdate
+                            .newUpdate__item
+                                button.newUpdate__btn
+                                    span New operating policy due to the influence of Covid-19 pandemic (Updated: 14 May 2020)
+                                    i.fas.fa-chevron-down
+                                .newUpdate__body
+                                    .newUpdate__cont
+                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            .newUpdate__item
+                                button.newUpdate__btn
+                                    span Regulations of the Vietnam Civil Aviation Administration on the use of masks on airplanes and at the airport (Updated: 15 Mar 2020)
+                                    i.fas.fa-chevron-down
+                                .newUpdate__body
+                                    .newUpdate__cont
+                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            .newUpdate__item
+                                button.newUpdate__btn
+                                    span Flights to and from South Korea still operate normally (Updated: 11 Mar 2020)
+                                    i.fas.fa-chevron-down
+                                .newUpdate__body
+                                    .newUpdate__cont
+                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            .newUpdate__item
+                                button.newUpdate__btn
+                                    span Reroute/reschedule/open ticket policy for all GA’s tickets during this COVID-19 period (Updated: 18 May 2020)
+                                    i.fas.fa-chevron-down
+                                .newUpdate__body
+                                    .newUpdate__cont
+                                        p.mb15 Dear our passenger,
+                                        p.mb15 We regret to inform you that from March 20, 2020 any refund request by the cash has been rejected by GA duringthis COVID-19 period.
+                                        p.mb15 Instead, passengers can be refunded in the form of the open ticket which is allowed be changed 1 time (by rescheduling/rerouting) with the new travel period until June 30, 2021:
+                                        p.mb15 - Reschedule without any additional charge applies only to the same route and same cabin of flight (regardless the fare class) to dates outside black-out period until June 30, 2021
+                                        p.mb15 If the new travel dates fall on black-out period, fare differences and taxes apply.
+                                        p.mb15 - Reroute without any additional charge applies to a flight of equal or lesser value
+                                        p.mb15 Please note that:
+                                        p.mb15 - Ticket is open for new booking till 31 October 2020.
+                                        p.mb15 - No-show fee will be applied if reservation is not cancelled (through rescheduling/rerouting/extend ticket validity or refund) by passenger before departure.
+                                        p.mb15 - For code-share flights with other airline, rescheduling must be to the same fare-class. For a different fare-class, there will be additional charge
+                                        p.mb15 Under this new policy, we are very sorry to inform that we cannot refund for you through your card in any case during the validity period of the policy. Customers who have booked tickets through our website and have flights belong to one of the above cases please contact us through our 24/7 supporting email: cs@flygarudaindonesia.com.
+                                        p.mb15 We appreciate your understanding of this inconvenience.
+                            .newUpdate__item
+                                button.newUpdate__btn
+                                    span Direct flight from Mumbai to Bali (Updated: 04 Mar 2020)
+                                    i.fas.fa-chevron-down
+                                .newUpdate__body
+                                    .newUpdate__cont
+                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.subMenu__child').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+        script.
+            $(".newUpdate__btn").on("click", function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(this)
+                        .siblings(".newUpdate__body")
+                        .slideUp(200);
+                    $(".newUpdate__btn i")
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
+                } else {
+                    $(".newUpdate__btn i")
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
+                    $(this)
+                        .find("i")
+                        .removeClass("fa-chevron-down")
+                        .addClass("fa-chevron-up");
+                    $(".newUpdate__btn").removeClass("active");
+                    $(this).addClass("active");
+                    $(".newUpdate__body").slideUp(200);
+                    $(this)
+                        .siblings(".newUpdate__body")
+                        .slideDown(200);
+                }
+            });
+
+
+
+
+
