@@ -1,0 +1,193 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .container
+                    h2.color1.mb30 Travel information
+                    ul.layoutInfo__navbar
+                        li
+                            a(href='newAndUpdate.html')
+                                span News & updates
+                        li
+                            a(href='baggageInfo.html')
+                                span Baggage information
+                        li
+                            a(href='flightRoutes.html')
+                                span Flight routes
+                        li
+                            a(href='fleet.html')
+                                span Fleet Revitalization
+                        li.active
+                            a(href='favDes.html')
+                                span Favourite Destinations
+                    .layoutInfo__body
+                        .layoutInfo__banner(style='background-image: url("../images/favDes-banner.jpg");')
+                            .container
+                                h1
+                                    | Favourite destinations
+                        .favDes
+                            .favDesTab
+                                .favDesTab__item
+                                    .dropdown
+                                        button.favDesTab__btn(type='button', data-toggle='dropdown')
+                                            span Domestic
+                                            svg.svgArrow.svg1(width='16', height='10', viewBox='0 0 16 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(fill-rule='evenodd', clip-rule='evenodd', d='M0.454505 0.829505C0.893845 0.390165 1.60616 0.390165 2.0455 0.829505L8 6.78401L13.9545 0.829505C14.3938 0.390165 15.1062 0.390165 15.5455 0.829505C15.9848 1.26884 15.9848 1.98116 15.5455 2.4205L8.7955 9.1705C8.35616 9.60983 7.64384 9.60983 7.2045 9.1705L0.454505 2.4205C0.015165 1.98116 0.015165 1.26884 0.454505 0.829505Z', fill='#021B67')
+
+                                        .dropdown-menu(style='')
+                                            ul.favDesTab__list
+                                                li.active
+                                                    a(href='#') Hanoi
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+                                                li
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Hanoi
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+                                                li
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+                                                li
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Hanoi
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+                                                li
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+
+
+                                .favDesTab__item
+                                    .dropdown
+                                        button.favDesTab__btn(type='button', data-toggle='dropdown')
+                                            span International
+                                            svg.svgArrow.svg1(width='16', height='10', viewBox='0 0 16 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(fill-rule='evenodd', clip-rule='evenodd', d='M0.454505 0.829505C0.893845 0.390165 1.60616 0.390165 2.0455 0.829505L8 6.78401L13.9545 0.829505C14.3938 0.390165 15.1062 0.390165 15.5455 0.829505C15.9848 1.26884 15.9848 1.98116 15.5455 2.4205L8.7955 9.1705C8.35616 9.60983 7.64384 9.60983 7.2045 9.1705L0.454505 2.4205C0.015165 1.98116 0.015165 1.26884 0.454505 0.829505Z', fill='#021B67')
+
+                                        .dropdown-menu(style='')
+                                            ul.favDesTab__list
+                                                li
+                                                    a(href='#') Hanoi
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+                                                li.active
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Hanoi
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+                                                li
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Hanoi
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+                                                li
+                                                    a(href='#') Rangsit
+                                                li
+                                                    a(href='#') Udon Thani
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Hat Yai
+                                                li
+                                                    a(href='#') Hanoi
+                                                li
+                                                    a(href='#') Pattaya
+                                                li
+                                                    a(href='#') Bangkok
+
+
+                            .favDes__cont
+                                h3.mb15.color1 Favourite destinations
+                                .favDes__img
+                                    .dImg
+                                        img(src='images/favDes-img1.jpg')
+                                    .dImg
+                                        img(src='images/favDes-img2.jpg')
+                                    .dImg
+                                        img(src='images/favDes-img3.jpg')
+                                    .dImg
+                                        img(src='images/favDes-img4.jpg')
+                                p.medium What is Lorem Ipsum?
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.subMenu__child').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+
+
