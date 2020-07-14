@@ -1,82 +1,93 @@
-.flightPayment{
-  &__body{
+.flightPayment {
+  &__body {
     padding: 30px 0;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 3vw 0;
     }
   }
-  &__box{
+
+  &__box {
     background: #FFFFFF;
     box-shadow: $shadow;
     border-radius: 4px;
     padding: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 4vw;
     }
   }
-  &__icon{
+
+  &__icon {
     text-align: center;
     margin-bottom: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-bottom: 1vw;
     }
   }
-  &__title{
+
+  &__title {
     text-align: center;
     font-weight: 500;
     font-size: 28px;
     margin-bottom: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       font-size: 2vw;
       margin-bottom: 1vw;
     }
   }
-  &__cont{
+
+  &__cont {
     text-align: center;
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       margin-bottom: 15px;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       width: 85%;
       margin: 0 auto 1.5vw;
     }
   }
-  &__again{
+
+  &__again {
     margin-bottom: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-bottom: 1vw;
     }
   }
-  &__question{
+
+  &__question {
     margin-bottom: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-bottom: 1vw;
     }
   }
-  &__list{
+
+  &__list {
     margin-top: 30px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-top: 3vw;
       display: flex;
       justify-content: center;
     }
-    li{
-      @include breakpoint(sm){
+
+    li {
+      @include breakpoint(sm) {
         padding: 0 2vw;
       }
-      p{
+
+      p {
         font-size: 14px;
         color: $black55;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           font-size: 1vw;
         }
       }
     }
   }
-  &__text{
+
+  &__text {
     text-align: center;
   }
-  &__price{
+
+  &__price {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -88,40 +99,44 @@
     font-size: 16px;
     font-weight: 500;
     margin: 15px 0;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 0 1vw;
       margin: 2vw 0;
       font-size: 1.1vw;
       height: 3vw;
     }
   }
-  &__link{
-    p{
+
+  &__link {
+    p {
       font-size: 14px;
       color: $black55;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         font-size: 1vw;
       }
     }
   }
 }
-.modal-failed{
-  @include breakpoint(sm){
+
+.modal-failed {
+  @include breakpoint(sm) {
     max-width: 55vw;
   }
-  &__title{
+
+  &__title {
     text-align: center;
     margin-bottom: 30px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-bottom: 2vw;
     }
   }
-  &__cont{
-    ul{
-      li{
+
+  &__cont {
+    ul {
+      li {
         font-size: 14px;
         padding: 5px 0;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           font-size: 1vw;
           padding: .5vw 0;
         }

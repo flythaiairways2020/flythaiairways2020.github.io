@@ -1,66 +1,75 @@
-.frequentBox{
+.frequentBox {
   display: none;
-  &__cont{
-    @include breakpoint(xs){
+
+  &__cont {
+    @include breakpoint(xs) {
       margin-top: 15px;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       display: flex;
       margin: 1vw -1vw 0;
     }
-    > .d-block{
-      @include breakpoint(sm){
+
+    > .d-block {
+      @include breakpoint(sm) {
         padding: 0 1vw;
       }
     }
   }
 }
-.flightPassenger{
-  &__main{
+
+.flightPassenger {
+  &__main {
     padding: 30px 0;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 3vw 0;
     }
   }
-  &__btn{
+
+  &__btn {
     text-align: right;
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       padding: 15px 0;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 2vw 0;
     }
-    .btn{
-      @include breakpoint(xs){
+
+    .btn {
+      @include breakpoint(xs) {
         min-width: 125px;
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         min-width: 10vw;
       }
     }
   }
 }
-.modal-tips{
-  @include breakpoint(lg){
+
+.modal-tips {
+  @include breakpoint(lg) {
     max-width: 50%;
   }
-  &__text{
+
+  &__text {
     text-align: center;
   }
 }
-.tipsBox{
-  &__item{
+
+.tipsBox {
+  &__item {
     background: #fff;
     box-shadow: $shadow;
     border-radius: 4px;
     margin-bottom: 15px;
     padding: 0 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-bottom: 1vw;
       padding: 0 1vw;
     }
   }
-  &__btn{
+
+  &__btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,75 +78,87 @@
     width: 100%;
     font-weight: 500;
     padding: 15px 0;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       font-size: 1.1vw;
       padding: 1vw 0;
     }
-    i{
+
+    i {
       color: rgba(0, 0, 0, 0.25);
     }
   }
-  &__body{
+
+  &__body {
     padding: 15px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.15);
     display: none;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 1vw 0;
     }
-    .form-group{
-      > label{
+
+    .form-group {
+      > label {
         font-weight: 400;
       }
     }
   }
-  &__cont{}
+
+  &__cont {
+  }
 }
 
-.passengerDetail{
+.passengerDetail {
   padding: 30px 0;
-  @include breakpoint(sm){
+  @include breakpoint(sm) {
     padding: 2vw 0;
   }
-  &__main{
-    @include breakpoint(sm){
+
+  &__main {
+    @include breakpoint(sm) {
       display: flex;
       background-color: #fff;
       box-shadow: $shadow;
       border-radius: 4px;
     }
   }
-  &__left{
-    @include breakpoint(sm){
+
+  &__left {
+    @include breakpoint(sm) {
       width: 19vw;
     }
   }
-  &__right{
-    @include breakpoint(xs){
+
+  &__right {
+    @include breakpoint(xs) {
       background-color: #fff;
       box-shadow: $shadow;
       padding: 24px 15px;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       width: calc(100% - 19vw);
       padding: 2vw;
     }
   }
-  &__tab{
+
+  &__tab {
     background-color: $color-1;
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       border-radius: 4px 4px 0 0;
       overflow: hidden;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       height: 100%;
     }
-    li{
+
+    li {
       border-bottom: 1px solid #fff;
-      &.active{
-        button{
+
+      &.active {
+        button {
           background: $color-2;
-          &:after{
-            @include breakpoint(sm){
+
+          &:after {
+            @include breakpoint(sm) {
               content: '';
               position: absolute;
               top: 50%;
@@ -150,7 +171,8 @@
           }
         }
       }
-      button{
+
+      button {
         color: #fff;
         font-size: 20px;
         display: block;
@@ -158,7 +180,7 @@
         padding: 15px;
         font-weight: 500;
         text-align: left;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           font-size: 1.3vw;
           padding: 1vw 2vw;
           position: relative;
@@ -166,10 +188,12 @@
       }
     }
   }
-  &__box{
+
+  &__box {
     display: none;
     animation: opacityShow .2s ease-in-out;
-    &.open{
+
+    &.open {
       display: block;
     }
   }

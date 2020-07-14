@@ -1,236 +1,270 @@
-.formBox{
-  &__body{}
-  &__item{
+.formBox {
+  &__item {
     background: #FFFFFF;
     box-shadow: $shadow;
     border-radius: 4px;
     margin-bottom: 30px;
     padding: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 2vw;
       margin-bottom: 2vw;
     }
   }
-  &__row{
-    @include breakpoint(xs){
+
+  &__row {
+    @include breakpoint(xs) {
       margin-bottom: 15px;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       display: flex;
       flex-wrap: wrap;
       margin: 0 -1vw 1vw;
     }
-    .checkbox{
+
+    .checkbox {
       margin-bottom: 15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding: 0 1vw;
         margin-bottom: 1vw;
       }
     }
   }
-  &__date{
+
+  &__date {
     width: 100%;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 0 1vw;
     }
-    > label{
+
+    > label {
       font-weight: 400;
       color: $black85;
       margin-bottom: 8px;
       font-size: 14px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         font-size: 1vw;
         margin-bottom: .7vw;
       }
     }
-    .d-flex{
-      @include breakpoint(xs){
+
+    .d-flex {
+      @include breakpoint(xs) {
         flex-wrap: wrap;
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin: 0 -1vw;
       }
     }
-    .form-group{
-      @include breakpoint(xs){
+
+    .form-group {
+      @include breakpoint(xs) {
         width: 100%;
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin-bottom: 0;
       }
     }
   }
-  &__text{
+
+  &__text {
     margin-bottom: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-bottom: 1vw;
     }
   }
-  &__tip{
+
+  &__tip {
     margin-top: 15px;
     font-size: 14px;
     color: #318FDB;
     font-weight: 500;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-top: 1vw;
       font-size: 1vw;
     }
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
-    span,svg{
+
+    span, svg {
       vertical-align: middle;
     }
-    span{
+
+    span {
       margin-left: 15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin-left: 1vw;
       }
     }
   }
-  &__frequent{
+
+  &__frequent {
     margin-bottom: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin-bottom: 1vw;
     }
-    > button{
+
+    > button {
       font-size: 14px;
       font-weight: 500;
       color: #318FDB;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         font-size: 1vw;
       }
-      &:hover{
-        span{
+
+      &:hover {
+        span {
           text-decoration: underline;
         }
       }
-      span{
+
+      span {
         margin-right: 15px;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           margin-right: 1vw;
         }
       }
-      svg{
+
+      svg {
         transition: all .3s;
       }
-      span,svg{
+
+      span, svg {
         vertical-align: middle;
       }
-      &.rotate{
-        svg{
+
+      &.rotate {
+        svg {
           transform: rotate(90deg);
         }
       }
     }
   }
-  &__flex{
-    @include breakpoint(sm){
+
+  &__flex {
+    @include breakpoint(sm) {
       display: flex;
     }
   }
-  &__left{
-    @include breakpoint(xs){
+
+  &__left {
+    @include breakpoint(xs) {
       padding-bottom: 15px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       margin-bottom: 15px;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       width: 50%;
       padding-right: 2vw;
     }
   }
-  &__right{
-    @include breakpoint(sm){
+
+  &__right {
+    @include breakpoint(sm) {
       width: 50%;
       padding-left: 2vw;
     }
   }
-  &__sub{
+
+  &__sub {
     background-color: rgba(14, 97, 215, 0.08);
     border-radius: 4px;
     padding: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       padding: 1vw;
     }
-    &.costBox{
+
+    &.costBox {
       display: none;
     }
-    li{
+
+    li {
       display: flex;
       justify-content: space-between;
       padding: 3px 0;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding: .3vw 0;
       }
     }
   }
-  &__price{
-    &__total{
+
+  &__price {
+    &__total {
       display: flex;
       justify-content: space-between;
       padding-bottom: 15px;
       border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding-bottom: 1vw;
       }
-      .d-block{
-        &:first-child{
+
+      .d-block {
+        &:first-child {
           flex: 1;
         }
       }
     }
-    &__cost{
+
+    &__cost {
       padding-top: 15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding-top: 1vw;
       }
-      .d-flex{
+
+      .d-flex {
         justify-content: space-between;
       }
     }
-    &__detail{
-      .d-flex{
+
+    &__detail {
+      .d-flex {
         justify-content: space-between;
         margin-bottom: 5px;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           margin-bottom: .5vw;
         }
       }
-      .btnDetail{
-        i{
+
+      .btnDetail {
+        i {
           transition: all .2s;
         }
-        &.rotate{
-          i{
+
+        &.rotate {
+          i {
             transform: rotate(180deg);
           }
         }
-        &:hover{
-          span{
+
+        &:hover {
+          span {
             text-decoration: underline;
           }
         }
       }
     }
   }
-  &__itinerary{
-    &__header{
+
+  &__itinerary {
+    &__header {
       border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
       margin-bottom: 15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin-bottom: 1.5vw;
       }
     }
-    &__trip{
+
+    &__trip {
       padding-left: 15px;
       position: relative;
       margin: 15px 0;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding-left: 2vw;
         margin: 1vw 0;
       }
-      &:before{
+
+      &:before {
         content: '';
         width: 1px;
         height: 75%;
@@ -238,15 +272,17 @@
         top: 10px;
         left: 0;
         background-color: rgba(0, 0, 0, 0.25);
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           top: .9vw;
         }
       }
-      li{
+
+      li {
         position: relative;
+
         &:first-child,
-        &:last-child{
-          &:before{
+        &:last-child {
+          &:before {
             content: '';
             position: absolute;
             top: 5px;
@@ -256,7 +292,7 @@
             border-radius: 50%;
             border: 1px solid rgba(0, 0, 0, 0.25);
             background-color: #fff;
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
               width: .9vw;
               height: .9vw;
               top: .3vw;
@@ -264,117 +300,132 @@
             }
           }
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
           padding: 30px 0;
-          @include breakpoint(sm){
+          @include breakpoint(sm) {
             padding: 2vw 0;
           }
         }
       }
     }
-    &__item{
+
+    &__item {
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-      @include breakpoint(xs){
+      @include breakpoint(xs) {
         padding: 15px;
         margin: 0 -15px;
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding-bottom: 1vw;
         margin-bottom: 1vw;
       }
-      &:last-child{
+
+      &:last-child {
         border-bottom: none;
         margin-bottom: 0;
         padding-bottom: 0;
       }
     }
   }
-  &__traveler{
-    &__item{
+
+  &__traveler {
+    &__item {
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-      @include breakpoint(xs){
+      @include breakpoint(xs) {
         padding: 15px;
         margin: 0 -15px;
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding: 1vw 0;
       }
-      &:last-child{
+
+      &:last-child {
         border-bottom: none;
       }
     }
   }
-  &__contact{
-    &__line{
+
+  &__contact {
+    &__line {
       display: flex;
       justify-content: space-between;
     }
   }
-  &__payment{
-    &__item{
+
+  &__payment {
+    &__item {
       margin-bottom: 15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin-bottom: 1vw;
       }
-      .radio{
-        label{
+
+      .radio {
+        label {
           font-weight: 500;
         }
       }
     }
-    &__card{
+
+    &__card {
       display: flex;
       margin-top: 15px;
       padding-left: 25px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin-top: 1vw;
         padding-left: 1.5vw;
       }
-      li{
+
+      li {
         padding: 0 5px;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           padding: 0 .5vw;
         }
-        img{
+
+        img {
           width: 64px;
-          @include breakpoint(sm){
+          @include breakpoint(sm) {
             width: 4vw;
           }
         }
       }
     }
   }
-  &__baggage{
-    &__item{
+
+  &__baggage {
+    &__item {
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-      @include breakpoint(xs){
+      @include breakpoint(xs) {
         padding: 15px;
         margin: 0 -15px;
       }
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding: 1vw 0;
       }
     }
-    &__text{
+
+    &__text {
       padding-top: 15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding-top: 1vw;
       }
     }
   }
-  &__term{
+
+  &__term {
     max-height: 300px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     margin-right: -15px;
     padding-right: 15px;
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       max-height: 30vw;
       margin-right: -1.5vw;
       padding-right: 2vw;
     }
+
     &::-webkit-scrollbar {
-      width:5px;
+      width: 5px;
     }
 
     /* Track */
@@ -385,7 +436,7 @@
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background:$purple;
+      background: $purple;
       border-radius: 16px;
     }
 
@@ -393,34 +444,38 @@
     &::-webkit-scrollbar-thumb:hover {
       background: $purple;
     }
-    p{
+
+    p {
       margin-bottom: 15px;
       font-size: 14px;
       color: $black85;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         margin-bottom: 1vw;
         font-size: 1vw;
 
       }
-      &.title{
+
+      &.title {
         font-size: 16px;
         font-weight: $medium;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           font-size: 1.1vw;
         }
       }
     }
-    ul{
+
+    ul {
       list-style: disc;
       padding-left: 15px;
-      @include breakpoint(sm){
+      @include breakpoint(sm) {
         padding-left: 1vw;
       }
-      li{
+
+      li {
         margin-bottom: 15px;
         font-size: 14px;
         color: $black85;
-        @include breakpoint(sm){
+        @include breakpoint(sm) {
           margin-bottom: 1vw;
           font-size: 1vw;
 
@@ -428,22 +483,26 @@
       }
     }
   }
-  &__btn{
-    @include breakpoint(sm){
+
+  &__btn {
+    @include breakpoint(sm) {
       text-align: right;
     }
-    .btn{
-      @include breakpoint(xs){
+
+    .btn {
+      @include breakpoint(xs) {
         width: 100%;
       }
     }
   }
-  .form-group{
-    @include breakpoint(sm){
+
+  .form-group {
+    @include breakpoint(sm) {
       width: 33.333%;
       padding: 0 1vw;
     }
-    > label{
+
+    > label {
       font-weight: 400;
       color: $black85;
     }
