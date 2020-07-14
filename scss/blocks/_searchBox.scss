@@ -172,7 +172,16 @@
     }
   }
   .dropdown-menu{
-    min-width: 100%;
+    @include breakpoint(xs){
+      transform: none!important;
+      top: 100% !important;
+      right: auto!important;
+      left: -15px!important;
+      min-width: calc(100% + 30px);
+    }
+    @include breakpoint(sm){
+      min-width: 100%;
+    }
   }
 }
 .promotionBox{

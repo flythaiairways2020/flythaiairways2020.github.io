@@ -89,7 +89,8 @@
 }
 .t-datepicker-days{
   @include breakpoint(xs){
-    width: 100%;
+    width: calc(100% + 30px);
+    left: -15px;
   }
   @include breakpoint(sm){
     width: 45vw;
