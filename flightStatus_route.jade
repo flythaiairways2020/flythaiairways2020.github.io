@@ -14,6 +14,7 @@ html(lang="vi")
                         .searchBox
                             .searchBox__item.open
                                 .searchBox__status
+                                    p.text16.color1.mb15.medium Enter Flight Information
                                     .searchBox__radio
                                         .radio
                                             input#r1(type='radio', name='fl' checked='')
@@ -236,12 +237,17 @@ html(lang="vi")
                                                                         li
                                                                             a(href='#') Bangkok (BKK)
 
-                                            .searchBox__datepicker
-                                                .t-datepicker
-                                                    .t-datepicker__col
-                                                        .t-datepicker__item
-                                                            label Depart
-                                                            .t-check-in
+                                            .searchBox__dropdown
+                                                .form-group
+                                                    label Depart date
+                                                    .dropdown
+                                                        button.dropdown-toggle(type='button' data-toggle='dropdown')
+                                                            span Today, Apr 20
+                                                            svg.svg1.svgArrow(width='12', height='8', viewBox='0 0 12 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M1.06252 1.93937L5.43065 7.03687C5.50106 7.11899 5.5884 7.18491 5.68668 7.23011C5.78496 7.2753 5.89185 7.2987 6.00002 7.2987C6.10819 7.2987 6.21509 7.2753 6.31337 7.23011C6.41165 7.18491 6.49899 7.11899 6.5694 7.03687L10.9375 1.93937C11.3544 1.45281 11.0088 0.701248 10.3681 0.701248H1.63065C0.990022 0.701248 0.644397 1.45281 1.06252 1.93937Z', fill='black', fill-opacity='0.25')
+                                                        .dropdown-menu
+                                                            a.dropdown-item(href='#') Today, Apr 20
+                                                            a.dropdown-item(href='#') Tomorrow, Apr 20
                                             .searchBox__btn
                                                 a.btn.btn-orange-1.btn-lg(href='flightStatus_route.html') Search
                                     .flightNumber.hidden
@@ -250,12 +256,17 @@ html(lang="vi")
                                                 .form-group
                                                     label Flight number
                                                     input.form-control(type='text' placeholder='Flight number')
-                                            .searchBox__datepicker
-                                                .t-datepicker
-                                                    .t-datepicker__col
-                                                        .t-datepicker__item
-                                                            label Depart
-                                                            .t-check-in
+                                            .searchBox__dropdown
+                                                .form-group
+                                                    label Depart date
+                                                    .dropdown
+                                                        button.dropdown-toggle(type='button' data-toggle='dropdown')
+                                                            span Today, Apr 20
+                                                            svg.svg1.svgArrow(width='12', height='8', viewBox='0 0 12 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M1.06252 1.93937L5.43065 7.03687C5.50106 7.11899 5.5884 7.18491 5.68668 7.23011C5.78496 7.2753 5.89185 7.2987 6.00002 7.2987C6.10819 7.2987 6.21509 7.2753 6.31337 7.23011C6.41165 7.18491 6.49899 7.11899 6.5694 7.03687L10.9375 1.93937C11.3544 1.45281 11.0088 0.701248 10.3681 0.701248H1.63065C0.990022 0.701248 0.644397 1.45281 1.06252 1.93937Z', fill='black', fill-opacity='0.25')
+                                                        .dropdown-menu
+                                                            a.dropdown-item(href='#') Today, Apr 20
+                                                            a.dropdown-item(href='#') Tomorrow, Apr 20
                                             .searchBox__btn
                                                 a.btn.btn-orange-1.btn-lg(href='flightStatus_number.html') Search
                         .lineInfo

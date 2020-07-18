@@ -136,7 +136,7 @@ html(lang="vi")
                                                             p.text24.color2.medium USD 666.88
                                                     .formBox__price__cost
                                                         .d-flex.mb5
-                                                            p.text14.colorBlack85 Fares
+                                                            p.text14.colorBlack85 Air Transportation Charges
                                                             p.text14.colorBlack85 USD 664.66
 
                                                         .d-flex.mb5
@@ -223,6 +223,9 @@ html(lang="vi")
                                                                 span VN 233
                                                             .airlineInfo__name
                                                                 span Airbus A321
+                                                        button.viewMore.mt5(type='button', data-toggle='modal', data-target='#flightDetailModal')
+                                                            span More details
+
                                                     .formBox__right
                                                         ul.formBox__sub
                                                             li
@@ -244,7 +247,7 @@ html(lang="vi")
                                                             p.text14.colorBlack85.mr15 Total Duration
                                                             p.text14.medium
                                                                 span.colorRed 02h05m,
-                                                                span.colorGreen &nbsp;Non-Stop
+                                                                span.colorGreen &nbsp;None-Stop
                                             .formBox__itinerary__item
                                                 .formBox__itinerary__header
                                                     p.text20.medium.color1.mb5 Return flight
@@ -277,6 +280,9 @@ html(lang="vi")
                                                                 span VN 233
                                                             .airlineInfo__name
                                                                 span Airbus A321
+                                                        button.viewMore.mt5(type='button', data-toggle='modal', data-target='#flightDetailModal')
+                                                            span More details
+
                                                     .formBox__right
                                                         ul.formBox__sub
                                                             li
@@ -304,84 +310,67 @@ html(lang="vi")
                                 .formBox__body
                                     .formBox__item
                                         .formBox__traveler
-                                            .formBox__traveler__item
-                                                .formBox__flex
-                                                    .formBox__left
-                                                        .d-flex
-                                                            svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                                path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.85')
-                                                            p.ml10.text16.colorBlack85.medium Adult 1
-                                                    .formBox__right
-                                                        ul.formBox__sub
-                                                            li
-                                                                p.text14.colorBlack85.medium Full Name
-                                                                p.text14.colorBlack85 Mr. Pham Duc Quang
-
-
-
-
-                                                            li
-                                                                p.text14.colorBlack85.medium Date of Birth
-                                                                p.text14.colorBlack85 26 Apr 1991
-
-
-
-
-                                                            li
-                                                                p.text14.colorBlack85.medium Passport
-                                                                p.text14.colorBlack85 B1234567
-
-
-
-
-                                                            li
-                                                                p.text14.colorBlack85.medium Nationality
-                                                                p.text14.colorBlack85 Vietnamese
-
-
-
-
-                                                            li
-                                                                p.text14.colorBlack85.medium Date of Issued
-                                                                p.text14.colorBlack85 12 May 2018
-
-
-
-
-                                                            li
-                                                                p.text14.colorBlack85.medium Date of Expired
-                                                                p.text14.colorBlack85 12 May 2028
-
-
-
-
-                                            .formBox__traveler__item
-                                                .formBox__flex
-                                                    .formBox__left
-                                                        .d-flex
-                                                            svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                                path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.85')
-                                                            p.ml10.text16.colorBlack85.medium Adult 2
-                                                    .formBox__right
-                                                        ul.formBox__sub
-                                                            li
-                                                                p.text14.colorBlack85.medium Full Name
-                                                                p.text14.colorBlack85 Mr. Pham Duc Quang
-                                                            li
-                                                                p.text14.colorBlack85.medium Date of Birth
-                                                                p.text14.colorBlack85 26 Apr 1991
-                                                            li
-                                                                p.text14.colorBlack85.medium Passport
-                                                                p.text14.colorBlack85 B1234567
-                                                            li
-                                                                p.text14.colorBlack85.medium Nationality
-                                                                p.text14.colorBlack85 Vietnamese
-                                                            li
-                                                                p.text14.colorBlack85.medium Date of Issued
-                                                                p.text14.colorBlack85 12 May 2018
-                                                            li
-                                                                p.text14.colorBlack85.medium Date of Expired
-                                                                p.text14.colorBlack85 12 May 2028
+                                            .travelerTable
+                                                .travelerTable__header
+                                                    .travelerTable__cell
+                                                        p.tex14.colorBlack85.medium Full Name
+                                                    .travelerTable__cell
+                                                        p.tex14.colorBlack85.medium Date of Birth
+                                                    .travelerTable__cell
+                                                        p.tex14.colorBlack85.medium Passport
+                                                    .travelerTable__cell
+                                                        p.tex14.colorBlack85.medium Nationality
+                                                    .travelerTable__cell
+                                                        p.tex14.colorBlack85.medium Date of Issued
+                                                    .travelerTable__cell
+                                                        p.tex14.colorBlack85.medium Date of Expired
+                                                    .travelerTable__cell
+                                                        p.tex14.colorBlack85.medium Frequent Flyer number
+                                                .travelerTable__body
+                                                    .travelerTable__row
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Full Name
+                                                            p.tex14.colorBlack85 Mr. Pham Duc Quang
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Date of Birth
+                                                            p.tex14.colorBlack85 26 Apr 1991
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Passport
+                                                            p.tex14.colorBlack85 B1234567
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Nationality
+                                                            p.tex14.colorBlack85 Vietnamese
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Date of Issued
+                                                            p.tex14.colorBlack85 12 May 2018
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Date of Expired
+                                                            p.tex14.colorBlack85 12 May 2018
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Frequent Flyer number
+                                                            p.tex14.colorBlack85 &nbsp;
+                                                    .travelerTable__row
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Full Name
+                                                            p.tex14.colorBlack85 Mr. Pham Duc Quang
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Date of Birth
+                                                            p.tex14.colorBlack85 26 Apr 1991
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Passport
+                                                            p.tex14.colorBlack85 B1234567
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Nationality
+                                                            p.tex14.colorBlack85 Vietnamese
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Date of Issued
+                                                            p.tex14.colorBlack85 12 May 2018
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Date of Expired
+                                                            p.tex14.colorBlack85 12 May 2018
+                                                        .travelerTable__cell
+                                                            p.tex14.colorBlack85.medium.pMobile Frequent Flyer number
+                                                            p.tex14.colorBlack85 &nbsp;
                             .formBox
                                 h2.color1.mb15 Contact details
                                 .formBox__body
@@ -521,6 +510,186 @@ html(lang="vi")
                                     | &nbsp;specified.
                         .flightReview__btn
                             a.btn.btn-orange-1(href='flightPayment.html') Continue
+        #flightDetailModal.modal.fade
+            .modal-dialog.modal-flightDetail
+                .modal-content
+                    .modal-body
+                        button.close(type='button', data-dismiss='modal')
+                            svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                        .modal-flightDetail__cont
+                            h2.mb30 FLIGHT DETAILS
+                            .modal-flightDetail__group
+                                .modal-flightDetail__desktop
+                                    .flDetail__info
+                                        .flDetail__item
+                                            p.p1.mb5
+                                                | Total Duration&nbsp;
+                                                strong.color3 02h05m, 2 Stop
+                                            .flInfo__trip
+                                                .flInfo__item
+                                                    .d-block
+                                                        p.medium.color1.text18 15:35 HAN
+                                                        p.text12.mb0.color1.medium Hanoi, Vietnam
+                                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                                        p.text12.colorBlack55 Suvarnabhumi
+                                                .flInfo__item
+                                                    .stopBox
+                                                        .stopBox__icon
+                                                            svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+                                                        .stopBox__text
+                                                            p 02h05m
+                                                            p.medium.mb0
+                                                                span.colorGreen None Stop
+                                                .flInfo__item
+                                                    .d-block
+                                                        p.medium.color1.text18 17: 40 BKK
+                                                        p.text12.mb0.color1.medium Bangkok, Thailand
+                                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                                        p.text12.colorBlack55 Suvarnabhumi
+
+                                            .airlineInfo
+                                                .airlineInfo__logo
+                                                    img(src='images/logo-vnairline.png')
+                                                    span VN 233
+                                                .airlineInfo__name
+                                                    span Airbus A321
+                                            .timeStop
+                                                .timeStop__cont
+                                                    svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0.5C7.01509 0.5 6.03982 0.693993 5.12987 1.0709C4.21993 1.44781 3.39314 2.00026 2.6967 2.6967C1.29018 4.10322 0.5 6.01088 0.5 8C0.5 9.98912 1.29018 11.8968 2.6967 13.3033C3.39314 13.9997 4.21993 14.5522 5.12987 14.9291C6.03982 15.306 7.01509 15.5 8 15.5C9.98912 15.5 11.8968 14.7098 13.3033 13.3033C14.7098 11.8968 15.5 9.98912 15.5 8C15.5 7.01509 15.306 6.03982 14.9291 5.12987C14.5522 4.21993 13.9997 3.39314 13.3033 2.6967C12.6069 2.00026 11.7801 1.44781 10.8701 1.0709C9.96018 0.693993 8.98491 0.5 8 0.5ZM11.15 11.15L7.25 8.75V4.25H8.375V8.15L11.75 10.175L11.15 11.15Z', fill='black', fill-opacity='0.45')
+                                                    span
+                                                        | Connection time&nbsp;
+                                                        strong 55mins
+                                        .flDetail__item
+                                            p.p1.mb5
+                                                | Total Duration&nbsp;
+                                                strong.color3 02h05m, 2 Stop
+                                            .flInfo__trip
+                                                .flInfo__item
+                                                    .d-block
+                                                        p.medium.color1.text18 15:35 HAN
+                                                        p.text12.mb0.color1.medium Hanoi, Vietnam
+                                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                                        p.text12.colorBlack55 Suvarnabhumi
+                                                .flInfo__item
+                                                    .stopBox
+                                                        .stopBox__icon
+                                                            svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+                                                        .stopBox__text
+                                                            p 02h05m
+                                                            p.medium.mb0
+                                                                span.colorGreen None Stop
+                                                .flInfo__item
+                                                    .d-block
+                                                        p.medium.color1.text18 17: 40 BKK
+                                                        p.text12.mb0.color1.medium Bangkok, Thailand
+                                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                                        p.text12.colorBlack55 Suvarnabhumi
+
+                                            .airlineInfo
+                                                .airlineInfo__logo
+                                                    img(src='images/logo-vnairline.png')
+                                                    span VN 233
+                                                .airlineInfo__name
+                                                    span Airbus A321
+                                            .timeStop
+                                                .timeStop__cont
+                                                    svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0.5C7.01509 0.5 6.03982 0.693993 5.12987 1.0709C4.21993 1.44781 3.39314 2.00026 2.6967 2.6967C1.29018 4.10322 0.5 6.01088 0.5 8C0.5 9.98912 1.29018 11.8968 2.6967 13.3033C3.39314 13.9997 4.21993 14.5522 5.12987 14.9291C6.03982 15.306 7.01509 15.5 8 15.5C9.98912 15.5 11.8968 14.7098 13.3033 13.3033C14.7098 11.8968 15.5 9.98912 15.5 8C15.5 7.01509 15.306 6.03982 14.9291 5.12987C14.5522 4.21993 13.9997 3.39314 13.3033 2.6967C12.6069 2.00026 11.7801 1.44781 10.8701 1.0709C9.96018 0.693993 8.98491 0.5 8 0.5ZM11.15 11.15L7.25 8.75V4.25H8.375V8.15L11.75 10.175L11.15 11.15Z', fill='black', fill-opacity='0.45')
+                                                    span
+                                                        | Connection time&nbsp;
+                                                        strong 55mins
+                                        .flDetail__item
+                                            p.p1.mb5
+                                                | Total Duration&nbsp;
+                                                strong.color3 02h05m, 2 Stop
+                                            .flInfo__trip
+                                                .flInfo__item
+                                                    .d-block
+                                                        p.medium.color1.text18 15:35 HAN
+                                                        p.text12.mb0.color1.medium Hanoi, Vietnam
+                                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                                        p.text12.colorBlack55 Suvarnabhumi
+                                                .flInfo__item
+                                                    .stopBox
+                                                        .stopBox__icon
+                                                            svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+                                                        .stopBox__text
+                                                            p 02h05m
+                                                            p.medium.mb0
+                                                                span.colorGreen None Stop
+                                                .flInfo__item
+                                                    .d-block
+                                                        p.medium.color1.text18 17: 40 BKK
+                                                        p.text12.mb0.color1.medium Bangkok, Thailand
+                                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                                        p.text12.colorBlack55 Suvarnabhumi
+
+                                            .airlineInfo
+                                                .airlineInfo__logo
+                                                    img(src='images/logo-vnairline.png')
+                                                    span VN 233
+                                                .airlineInfo__name
+                                                    span Airbus A321
+                                .modal-flightDetail__mobile
+                                    .flInfo
+                                        .flInfo__trip
+                                            .flInfo__item
+                                                .d-block
+                                                    p.medium.color1.text18 15:35 HAN
+                                                    p.text12.mb0.color1.medium Hanoi, Vietnam
+                                            .flInfo__item
+                                                .stopBox
+                                                    .stopBox__icon
+                                                        svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+                                                    .stopBox__text
+                                                        p 02h05m
+                                                        p.medium.mb0
+                                                            span.colorGreen None Stop
+                                            .flInfo__item
+                                                .d-block
+                                                    p.medium.color1.text18 17: 40 BKK
+                                                    p.text12.mb0.color1.medium Bangkok, Thailand
+
+                                        .flInfo__flex
+                                            ul
+                                                li
+                                                    .airlineInfo
+                                                        .airlineInfo__logo
+                                                            img(src='images/logo-vnairline.png')
+                                                            span VN 233
+                                    .flInfo
+                                        .flInfo__trip
+                                            .flInfo__item
+                                                .d-block
+                                                    p.medium.color1.text18 15:35 HAN
+                                                    p.text12.mb0.color1.medium Hanoi, Vietnam
+                                            .flInfo__item
+                                                .stopBox
+                                                    .stopBox__icon
+                                                        svg.svg1(width='24', height='20', viewBox='0 0 24 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19.1117 7.75C18.9842 7.75 18.4348 7.75375 18.2366 7.76453L15.5286 7.83578L9.28391 0.25H6.33969L9.8361 7.96609L5.27469 8.03359L3.19907 5.5H0.756411L1.7225 9.91469C1.72954 9.94 1.73797 9.96484 1.74735 9.98922C1.74804 9.99151 1.74804 9.99396 1.74735 9.99625C1.73774 10.0205 1.72944 10.0452 1.7225 10.0703L0.743286 14.5H3.17047L5.30094 11.9219L9.83704 12.0236L6.33922 19.75H9.29235L15.5267 12.168L18.2347 12.2402C18.4358 12.2509 18.9847 12.2547 19.1094 12.2547C20.2508 12.2547 21.1845 12.0981 21.8848 11.7887C23.0727 11.2656 23.2498 10.4434 23.2498 10C23.2498 8.59094 21.703 7.75 19.1117 7.75Z', fill='#0E61D7', fill-opacity='0.4')
+                                                    .stopBox__text
+                                                        p 02h05m
+                                                        p.medium.mb0
+                                                            span.colorGreen None Stop
+                                            .flInfo__item
+                                                .d-block
+                                                    p.medium.color1.text18 17: 40 BKK
+                                                    p.text12.mb0.color1.medium Bangkok, Thailand
+
+                                        .flInfo__flex
+                                            ul
+                                                li
+                                                    .airlineInfo
+                                                        .airlineInfo__logo
+                                                            img(src='images/logo-vnairline.png')
+                                                            span VN 233
         include jades/footer
         script(src='js/jquery-3.3.1.min.js')
         script(src='js/popper.min.js')

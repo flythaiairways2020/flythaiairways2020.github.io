@@ -67,10 +67,8 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   height: 48px;
-  padding: 0 15px;
   @include breakpoint(sm){
     height: 3.3vw;
-    padding: 0 1vw;
   }
   &__item{
     display: flex;
@@ -142,8 +140,10 @@
       margin-bottom: 0;
       font-weight: 400;
       width: 100%;
+      padding: 0 15px;
       @include breakpoint(sm){
         font-size: .9vw;
+        padding: 0 1vw;
       }
     }
   }
@@ -155,33 +155,36 @@
     border: none;
     height: auto;
     border-radius: 0;
-    padding: 0;
+    padding: 0 15px;
     color: $color-1;
     width: 100%;
     font-weight: 500;
+    @include breakpoint(sm){
+      padding: 0 1vw;
+    }
     &:after{
       display: none;
     }
     .svgArrow{
       position: absolute;
-      top: -3px;
-      right: 0;
+      margin: 0;
+      @include breakpoint(xs){
+        top: -3px;
+        right: 15px;
+      }
       @include breakpoint(sm){
         top: -.2vw;
+        right: 1vw;
       }
     }
   }
   .dropdown-menu{
-    @include breakpoint(xs){
-      transform: none!important;
-      top: 100% !important;
-      right: auto!important;
-      left: -15px!important;
-      min-width: calc(100% + 30px);
-    }
-    @include breakpoint(sm){
-      min-width: 100%;
-    }
+    transform: none!important;
+    top: 100% !important;
+    right: 0!important;
+    left: 0!important;
+    min-width: 100%;
+    margin: 0;
   }
 }
 .promotionBox{
@@ -447,7 +450,6 @@
       padding: 0 .7vw;
     }
   }
-
   &__btn{
     @include breakpoint(sm){
       width: 25%;
@@ -465,7 +467,6 @@
       display: none;
     }
   }
-
   &__add{
     margin-bottom: 15px;
   }
@@ -558,6 +559,71 @@
         padding: 0 .7vw;
         margin-bottom: 1.4vw;
       }
+    }
+  }
+  &__dropdown{
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+    }
+    @include breakpoint(sm){
+      width: 25%;
+    }
+    .form-group{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      height: 48px;
+      margin-bottom: 0;
+      @include breakpoint(sm){
+        height: 3.3vw;
+      }
+      > label{
+        color: rgba(0, 0, 0, 0.45);
+        font-size: 12px;
+        margin-bottom: 0;
+        font-weight: 400;
+        width: 100%;
+        padding: 0 15px;
+        @include breakpoint(sm){
+          font-size: .9vw;
+          padding: 0 1vw;
+        }
+      }
+    }
+    .dropdown{
+      width: 100%;
+    }
+    .dropdown-toggle{
+      background: transparent;
+      border: none;
+      height: auto;
+      border-radius: 0;
+      padding: 0 15px;
+      color: $color-1;
+      width: 100%;
+      font-weight: 500;
+      @include breakpoint(sm){
+        padding: 0 1vw;
+      }
+      &:after{
+        display: none;
+      }
+      .svgArrow{
+        position: absolute;
+        top: -3px;
+        right: 0;
+        @include breakpoint(sm){
+          top: -.2vw;
+        }
+      }
+    }
+    .dropdown-menu{
+      min-width: 100%;
+      transform: none!important;
+      top: 100% !important;
     }
   }
 }
@@ -682,7 +748,7 @@
     width: 25vw;
     left: 0;
     max-height: 30vw;
-    top: calc(100% + .2vw);
+    top: 100%;
     &::-webkit-scrollbar {
       width:4px;
     }

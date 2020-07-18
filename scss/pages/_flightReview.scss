@@ -139,3 +139,63 @@
     }
   }
 }
+
+.modal-flightDetail{
+  @include breakpoint(sm){
+    max-width: 50%;
+  }
+  &__cont{
+    h2{
+      text-align: center;
+    }
+  }
+  &__desktop{
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+  &__mobile{
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+}
+.travelerTable{
+  &__header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    @include breakpoint(xs){display: none}
+  }
+  &__body{}
+  &__row{
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    @include breakpoint(xs){
+      padding: 10px 0;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+    .pMobile{
+      @include breakpoint(sm){
+        display: none;
+      }
+    }
+  }
+  &__cell{
+    @include breakpoint(xs){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+    }
+    @include breakpoint(sm){
+      flex: 1;
+      padding: .5vw 1vw;
+    }
+  }
+}

@@ -685,7 +685,7 @@ html(lang="vi")
                                                     path(d='M23.888 1.83201C23.8546 1.81781 23.8177 1.81394 23.782 1.82089C23.7464 1.82784 23.7136 1.8453 23.688 1.87101L13.941 11.616C13.4253 12.1314 12.7261 12.4209 11.997 12.4209C11.2679 12.4209 10.5687 12.1314 10.053 11.616L0.310002 1.87101C0.28451 1.84506 0.251754 1.82744 0.216052 1.82048C0.180349 1.81352 0.143375 1.81754 0.110002 1.83201C0.0772087 1.84613 0.0492947 1.86959 0.0297354 1.89946C0.0101762 1.92934 -0.000164108 1.9643 1.96956e-06 2.00001V14C1.96956e-06 14.5304 0.210716 15.0391 0.585788 15.4142C0.960861 15.7893 1.46957 16 2 16H22C22.5304 16 23.0391 15.7893 23.4142 15.4142C23.7893 15.0391 24 14.5304 24 14V2.00001C24.0001 1.96405 23.9896 1.92886 23.9696 1.89894C23.9497 1.86902 23.9212 1.84572 23.888 1.83201Z', fill='black', fill-opacity='0.25')
                                                     path(d='M11.1146 10.556C11.3493 10.79 11.6672 10.9214 11.9986 10.9214C12.3301 10.9214 12.648 10.79 12.8826 10.556L22.5686 0.87C22.6342 0.804424 22.6803 0.721904 22.7016 0.631664C22.723 0.541423 22.7188 0.447018 22.6896 0.359C22.5796 0.0300002 22.2736 0 21.9996 0H1.99964C1.72464 0 1.41664 0.0300002 1.30864 0.359C1.27944 0.447018 1.27529 0.541423 1.29666 0.631664C1.31803 0.721904 1.36407 0.804424 1.42964 0.87L11.1146 10.556Z', fill='black', fill-opacity='0.25')
                                         .searchBox__btn
-                                            a.btn.btn-orange-1.btn-lg(href='flightList.html') Search
+                                            a.btn.btn-orange-1.btn-lg(href='flightReview.html') Search
                                     p.text14.colorWhite.mt15 *Note: It is only accepted for bookings on our website!
                             #tab-3.searchBox__item
                                 .searchBox__close
@@ -922,6 +922,7 @@ html(lang="vi")
                                         svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
                                             path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
                                 .searchBox__status
+                                    p.text16.colorWhite.mb15.medium Enter Flight Information
                                     .searchBox__radio.radioTransparent
                                         .radio
                                             input#r1(type='radio', name='fl' checked='')
@@ -1144,12 +1145,17 @@ html(lang="vi")
                                                                         li
                                                                             a(href='#') Bangkok (BKK)
 
-                                            .searchBox__datepicker
-                                                .t-datepicker
-                                                    .t-datepicker__col
-                                                        .t-datepicker__item
-                                                            label Depart
-                                                            .t-check-in
+                                            .searchBox__dropdown
+                                                .form-group
+                                                    label Depart date
+                                                    .dropdown
+                                                        button.dropdown-toggle(type='button' data-toggle='dropdown')
+                                                            span Today, Apr 20
+                                                            svg.svg1.svgArrow(width='12', height='8', viewBox='0 0 12 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M1.06252 1.93937L5.43065 7.03687C5.50106 7.11899 5.5884 7.18491 5.68668 7.23011C5.78496 7.2753 5.89185 7.2987 6.00002 7.2987C6.10819 7.2987 6.21509 7.2753 6.31337 7.23011C6.41165 7.18491 6.49899 7.11899 6.5694 7.03687L10.9375 1.93937C11.3544 1.45281 11.0088 0.701248 10.3681 0.701248H1.63065C0.990022 0.701248 0.644397 1.45281 1.06252 1.93937Z', fill='black', fill-opacity='0.25')
+                                                        .dropdown-menu
+                                                            a.dropdown-item(href='#') Today, Apr 20
+                                                            a.dropdown-item(href='#') Tomorrow, Apr 20
                                             .searchBox__btn
                                                 a.btn.btn-orange-1.btn-lg(href='flightStatus_route.html') Search
                                     .flightNumber.hidden
@@ -1158,12 +1164,17 @@ html(lang="vi")
                                                 .form-group
                                                     label Flight number
                                                     input.form-control(type='text' placeholder='Flight number')
-                                            .searchBox__datepicker
-                                                .t-datepicker
-                                                    .t-datepicker__col
-                                                        .t-datepicker__item
-                                                            label Depart
-                                                            .t-check-in
+                                            .searchBox__dropdown
+                                                .form-group
+                                                    label Depart date
+                                                    .dropdown
+                                                        button.dropdown-toggle(type='button' data-toggle='dropdown')
+                                                            span Today, Apr 20
+                                                            svg.svg1.svgArrow(width='12', height='8', viewBox='0 0 12 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M1.06252 1.93937L5.43065 7.03687C5.50106 7.11899 5.5884 7.18491 5.68668 7.23011C5.78496 7.2753 5.89185 7.2987 6.00002 7.2987C6.10819 7.2987 6.21509 7.2753 6.31337 7.23011C6.41165 7.18491 6.49899 7.11899 6.5694 7.03687L10.9375 1.93937C11.3544 1.45281 11.0088 0.701248 10.3681 0.701248H1.63065C0.990022 0.701248 0.644397 1.45281 1.06252 1.93937Z', fill='black', fill-opacity='0.25')
+                                                        .dropdown-menu
+                                                            a.dropdown-item(href='#') Today, Apr 20
+                                                            a.dropdown-item(href='#') Tomorrow, Apr 20
                                             .searchBox__btn
                                                 a.btn.btn-orange-1.btn-lg(href='flightStatus_number.html') Search
                 .offersBox

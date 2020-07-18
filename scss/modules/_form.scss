@@ -57,7 +57,7 @@
   }
   >label{
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 8px;
     @include breakpoint(sm){
       font-size: 1vw;
@@ -139,6 +139,9 @@ select.form-control{
   }
 }
 .formMerge{
+  @include breakpoint(xs){
+    margin-bottom: 15px;
+  }
   .form-group{
     margin-bottom: 0;
     background-color: #fff;

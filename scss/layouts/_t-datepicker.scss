@@ -26,10 +26,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 15px;
     @include breakpoint(sm){
       height: 3.3vw;
-      padding: 0 1vw;
     }
     > label{
       color: rgba(0, 0, 0, 0.45);
@@ -38,8 +36,10 @@
       font-weight: 400;
       width: 100%;
       line-height: 1.5;
+      padding: 0 15px;
       @include breakpoint(sm){
         font-size: .9vw;
+        padding: 0 1vw;
       }
     }
   }
@@ -48,8 +48,9 @@
     border: none;
     border-radius: 0;
     float: none;
-    > span {
-
+    padding: 0 15px;
+    @include breakpoint(sm){
+      padding: 0 1vw;
     }
   }
   .t-dates{
@@ -89,8 +90,8 @@
 }
 .t-datepicker-days{
   @include breakpoint(xs){
-    width: calc(100% + 30px);
-    left: -15px;
+    width: 100%;
+    left: 0;
   }
   @include breakpoint(sm){
     width: 45vw;
@@ -110,8 +111,9 @@
     top: 25px;
   }
   @include breakpoint(sm){
-    top: calc(100% + .5vw);
+    top: 100%;
     padding: .8vw 0;
+    left: 0;
   }
 }
 .t-next, .t-prev, .t-table-condensed td, .t-table-condensed th{

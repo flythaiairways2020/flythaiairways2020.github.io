@@ -37,63 +37,63 @@ html(lang="vi")
                             .faq__item
                                 button.faq__btn
                                     span 1. What should I do if I miss my connecting flight because of flight delays and cancellations?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 2. How can I know if my flight is delayed or cancelled?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 3. Can I purchase multiple trips through your website? Will my baggage be checked through to the final destination?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 4. How many passengers can I book online through your website?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 5. I want to travel today; can I purchase a ticket online?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 6. How long after the payment made I will receive an e-ticket?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 7. What should I do if my payment keeps failing?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 8. I want to change my flight, how can I do it?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
                             .faq__item
                                 button.faq__btn
                                     span 9. Is my credit card information safe and secure?
-                                    i.fas.fa-plus
+                                    i.fas.fa-chevron-down
                                 .faq__body
                                     .faq__cont
                                         p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
@@ -127,16 +127,16 @@ html(lang="vi")
                         .siblings(".faq__body")
                         .slideUp(200);
                     $(".faq__btn i")
-                        .removeClass("fa-minus")
-                        .addClass("fa-plus");
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
                 } else {
                     $(".faq__btn i")
-                        .removeClass("fa-minus")
-                        .addClass("fa-plus");
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
                     $(this)
                         .find("i")
-                        .removeClass("fa-plus")
-                        .addClass("fa-minus");
+                        .removeClass("fa-chevron-down")
+                        .addClass("fa-chevron-up");
                     $(".faq__btn").removeClass("active");
                     $(this).addClass("active");
                     $(".faq__body").slideUp(200);

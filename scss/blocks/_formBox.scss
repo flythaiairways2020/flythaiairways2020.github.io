@@ -436,13 +436,13 @@
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: $purple;
+      background: $color-1;
       border-radius: 16px;
     }
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background: $purple;
+      background: $color-1;
     }
 
     p {
