@@ -1007,8 +1007,8 @@ html(lang="vi")
 
         script.
             if (screen.width < 768) {
-                $('.flTicketMobile__arrow').click(function () {
-                    $(this).toggleClass('rotate');
+                $('.flTicketMobile__total').click(function () {
+                    $(this).find('.flTicketMobile__arrow').toggleClass('rotate');
                     $(this).parents('.flTicketMobile__item').find('.flTicketMobile__price').slideToggle(200);
                 });
 
@@ -1025,10 +1025,6 @@ html(lang="vi")
                 $('.btnFareCondition').click(function () {
                     $('.flDetail__mobile').slideToggle(400);
                     $(this).toggleClass('rotate');
-
-                    // $('.flDetail__main').animate({
-                    //     scrollTop: $(".flTicketMobile .flDetail__right").offset().top - 55
-                    // }, 400);
                 });
             };
 

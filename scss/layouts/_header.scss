@@ -176,6 +176,12 @@
 .subMenu{
   &.active{
     > a {
+      @include breakpoint(xs){
+        color: $orange-1;
+        &:after{
+          color: $orange-1;
+        }
+      }
       &:after{
         @include breakpoint(xs){
           transform: rotate(180deg);
