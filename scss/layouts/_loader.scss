@@ -75,6 +75,12 @@
       }
     }
 
+    .plane {
+      fill              : none;
+      -webkit-animation : flyaround 2500ms infinite linear;
+      animation         : flyaround 2500ms infinite linear;
+    }
+
     .delay-1 { -webkit-animation-delay: 123ms; animation-delay: 123ms; }
     .delay-2 { -webkit-animation-delay: 2023ms; animation-delay: 2023ms; }
     .delay-3 { -webkit-animation-delay: 773ms; animation-delay: 773ms; }
